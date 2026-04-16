@@ -1,13 +1,13 @@
 # PP1 2026 — Proyecto Integrador
 
-**Grupo**: [Nombre del grupo]  
-**Proyecto**: [Nombre del proyecto elegido]  
+**Grupo**: [Grupo 2]  
+**Proyecto**: [Sistema de gestion de Pedios Almuerzo]  
 **Integrantes**:
-- [Nombre y Apellido 1]
-- [Nombre y Apellido 2]
-- [Nombre y Apellido 3]
-- [Nombre y Apellido 4]
-
+- [Juan Ignacio Fernandez Vergara]
+- [Gema Lila Firpo]
+- [Francisco Cayetano Pagliano]
+- [Mariano Augusto Lopez]
+- [Agustin Sebastian Solari]
 ---
 
 ## Estructura del repositorio
