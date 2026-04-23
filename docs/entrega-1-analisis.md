@@ -57,7 +57,7 @@ HU-12 como Externo quiere notificar sobre los detalles de los pedidos correspond
 | RF-11 |El sistema debe permitir que el administrador gestione los pedidos                  |Administrador   | HU-10               |
 | RF-12 |El sistema debe permitir agregar un menu para cargar las viandas que habra semanalmente |Administrador|  HU-9             |
 | RF-13 |El sistema debe permitir modificar el menu semanal para poder corregir errores o solucionar inconvenientes que surjan en el momento. |Administrador |  HU-9       |          
-| RF-14 |El sistema debe permitir eliminar el menu semanal para poder cargar el nuevo||Administrador           | HU-9               |
+| RF-14 |El sistema debe permitir eliminar el menu semanal para poder cargar el nuevo |Administrador           | HU-9               |
 | RF-15 |El sistema debe poder notificar al administrador sobre los detalles de los pedidos confirmados|Externo| HU-12 |
 | RF-16 |El sistema debe permitir verificar la disponibilidad de las viandas para avisar en caso de quedar sin stock. |Administrador |   HU-11      |
 | RF-17 |El sistema debe permitir el pedido.                                                  |empelado       | HU-4              |
