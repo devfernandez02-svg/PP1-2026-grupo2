@@ -1,8 +1,8 @@
 # Entrega 1 — Análisis del Sistema
 
-**Grupo**: [Nombre del grupo]  
-**Proyecto**: [Nombre del proyecto elegido]  
-**Fecha de entrega**: 30/04/2026
+**Grupo**: [Grupo 2]  
+**Proyecto**: [Sistema de gestion de Pedios Almuerzo]  
+**Fecha de entrega**: 22/04/26
 
 ---
 
@@ -10,7 +10,24 @@
 
 | Actor | Rol / Función en el sistema | Tipo (usuario final, sistema externo, etc.) |
 |-------|-----------------------------|---------------------------------------------|
-|       |                             |                                             |
+| Empleado      |              Registrarse               |   Usuario Final          |
+| Empleado      |    Iniciar Sesion                      |   Usuario Final          |
+| Empleado      |    Mantener Datos actualizado          |   Usuario Final          |
+| Empleado      |    Modificar Pedidos                   |   Usuario Final          |
+| Empleado      |    Confirmar Pedidos                   |   Usuario Final          |
+| Empleado      |    Cancelar Pedido                     |   Usuario Final          |
+| Empleado      |    Realizar Pedido                     |   Usuario Final          |
+| Empleado      |    Consultar menu(semanal)             |   Usuario Final          |     
+| Empleado      |    Configurar dias de Asistencia       |   Usuario Final          |
+| Administradores|    Registrarse                        |   Usuario Final          |
+| Administradores|    Iniciar Sesion                     |   Usuario Final          |
+| Administradores|    Agregar Menu(semanal)              |   Usuario Final          |
+| Administradores|    Modifica Menu(semanal)             |   Usuario Final          |
+| Administradores|    Eliminar Menu(semanal)             |   Usuario Final          |
+| Administradores|    Gestionar Pedidos                  |   Usuario Final          |
+| Administradores|    Verificar Disponibilidad           |   Usuario Final          |
+| Administradores|    Confirmar Pedido                   |   Usuario Final          |
+
 
 ## 2. Requisitos Funcionales
 
