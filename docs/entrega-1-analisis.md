@@ -75,7 +75,7 @@ HU-12 como Externo quiere notificar sobre los detalles de los pedidos correspond
 
 | ID    | Como...       | Quiero...                  | Para...                            |
 |-------|---------------|----------------------------|------------------------------------|
-| HU-01 | [rol/actor]   | [acción o funcionalidad]   | [beneficio o resultado esperado]   |
+| HU-01 | Empleado      | Registrarme                | Tener un usuario en el sistema     |
 | HU-02 |               |                            |                                    |
 
 ## 5. Diagrama de Casos de Uso
