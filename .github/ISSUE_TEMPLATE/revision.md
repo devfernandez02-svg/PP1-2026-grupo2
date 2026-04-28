@@ -1,3 +1,11 @@
+---
+name: Revisión de consignas
+about: Reportar errores o mejoras en la entrega
+title: "[REVISION] "
+labels: review
+assignees: ''
+---
+
 ### 📌 Tipo
 
 * [ ] Error
