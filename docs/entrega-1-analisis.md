@@ -78,22 +78,83 @@
 
 ## 6. Especificación de Casos de Uso
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### CU-01 — [Nombre del caso de uso]
 
 | Campo | Detalle |
 |---|---|
-| **Actor principal** | |
-| **Descripción** | |
-| **Precondiciones** | |
-| **Postcondiciones (criterios de aceptación)** | |
+| **Actor principal** |  Administrador |
+| **Descripción** | Gestion de tabla-menu semanal|
+| **Precondiciones** |Iniciar sesión como administrador|
+| **Postcondiciones (criterios de aceptación)** | se sube la tabla de menu semanal |
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1.  |  |
-| 2.  |  |
-| 3.  |  |
+| 1. el usuario accede al apartado de menu semanal|si hay una tabla subida el usiario debera eliminarla anted de subir la nueva |
+| 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
+| 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
+
+|
 
 ---
 
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
+| Campo | Detalle |
+|--|--|
+| **Actor principal** | Empleado |
+| **Descripción** | Permite al empleado consultar el menu disponible del sistema |
+| **Precondiciones** | El usuario debe haber egistrado los dias de asistencia |
+| **Postcondiciones (criterios de aceptación)** | El empleado puede visualizar el menu de una forma correcta |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|--|--|
+| 1. El empleado ingresa al apartado de menú | |
+| 2. El sistema verifica la disponibilidad del menú |No hay menú disponible |
+| 3. El sistema muestra el menu con las viandas disponibles | |
