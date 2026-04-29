@@ -80,18 +80,119 @@
 
 ### CU-01 — [Nombre del caso de uso]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 | Campo | Detalle |
 |---|---|
-| **Actor principal** | |
-| **Descripción** | |
-| **Precondiciones** | |
-| **Postcondiciones (criterios de aceptación)** | |
+| **Actor principal** |Administrador|
+| **Descripción** |Consultar pedido:Determinar la cantidad de viandas de cada tipo a realizar |
+| **Precondiciones** |Tener un usuario en el sistema,iniciar sesion como Administrador, Debe haber un registro de pedido confirmado. |
+| **Postcondiciones (criterios de aceptación)** | Una vez consultado, puede vizulizar los detalles de los pedidos realizados. |
+
+
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1.  |  |
-| 2.  |  |
+| 1. Tiene que ir a la seccion de consulta pedidos | |
+| 2.  | |
 | 3.  |  |
+
+
+| Campo | Detalle |
+|---|---|
+| **Actor principal** |Administrador|
+| **Descripción** |Verificar Stock: disponibilidad de las viandas para avisar en caso de quedar sin stock. |
+| **Precondiciones** |Tener un usuario en el sistema,iniciar sesion como Administrador. |
+| **Postcondiciones (criterios de aceptación)** | Permite realizar pedidos, debido que hay stock |
+
+
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1.  | Notifica que no hay stock disponible  |
+| 2.  | |
+| 3.  | |
+
+
 
 ---
 
