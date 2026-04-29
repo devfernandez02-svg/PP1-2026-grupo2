@@ -15,10 +15,10 @@
 | Empleado      |    gestionar Pedidos                   |   Usuario Final          |
 | Empleado      |    Consultar menu(semanal)             |   Usuario Final          |     
 | Empleado      |    Configurar dias de Asistencia       |   Usuario Final          |
-|Administradores|    Registrarse,iniciar sesion          |   Administrador          |
-|Administradores|    gestionar Menu(semanal)             |   Administrador          ||
-|Administradores|    Gestionar Pedidos                   |   Administrador          |
-|Administradores|    Verificar Disponibilidad            |   Administrador          |
+|Administrador  |    Registrarse,iniciar sesion          |   Administrador          |
+|Administrador  |    gestionar Menu(semanal)             |   Administrador          ||
+|Administrador  |    Gestionar Pedidos                   |   Administrador          |
+|Administrador  |    Verificar Disponibilidad            |   Administrador          |
 
 
 ## 2. Requisitos Funcionales
@@ -49,8 +49,15 @@
 
 | ID     | Categoría (rendimiento, seguridad, usabilidad, etc.) | Descripción |
 |--------|------------------------------------------------------|-------------|
-| RNF-01 |                                                      |             |
-| RNF-02 |                                                      |             |
+| RNF-01 | Seguridad | El sistema debe requerir autenticacion mediante usuario y contraseña para acceder. |
+| RNF-02 | Seguridad | El sistema debe proteger la informacion de los usuarios y pedidos contra accesos no autorizados. |
+| RNF-03 | Rendimiento | El sistema debe responder a las acciones de los usuarios en un tiempo maximo de 3 segundos. |
+| RNF-04 | Rendimiento | El sistema debe permitir multiples usuarios en simultaneo sin empeorar el rendimiento. |
+| RNF-05 | Usabilidad | El sistema debe contar con una interfaz simple e intuitiva. |
+| RNF-06 | Usabilidad | El sistema debe mostrar mesajes claros ante errores. |
+| RNF-07 | Compatibilidad | El sistema debe ser accesible desde distintos dispositivos (PC, tablet, celular). |
+| RNF-08 | Compatibilidad | El sistema debe ser compatible con los navegadores mas utilizados. |
+
 
 ## 4. Historias de Usuario
 
