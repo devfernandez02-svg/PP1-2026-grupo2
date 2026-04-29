@@ -10,15 +10,8 @@
 
 | Actor | Rol / Función en el sistema | Tipo (usuario final, sistema externo, etc.) |
 |-------|-----------------------------|---------------------------------------------|
-| Empleado      |    Iniciar Sesion, registrarme         |   Usuario Final          |
-| Empleado      |    Mantener Datos actualizado          |   Usuario Final          |
-| Empleado      |    gestionar Pedidos                   |   Usuario Final          |
-| Empleado      |    Consultar menu(semanal)             |   Usuario Final          |     
-| Empleado      |    Configurar dias de Asistencia       |   Usuario Final          |
-|Administrador  |    Registrarse,iniciar sesion          |   Administrador          |
-|Administrador  |    gestionar Menu(semanal)             |   Administrador          ||
-|Administrador  |    Gestionar Pedidos                   |   Administrador          |
-|Administrador  |    Verificar Disponibilidad            |   Administrador          |
+| Empleado      |    Iniciar Sesion, registrarme, mantener Datos actualizados, gestionar Pedidos, Consultar menu(semanal), Configurar dias de Asistencia          |   Usuario Final          |
+|Administrador  |    Registrarse,iniciar sesion, gestionar Menu(semanal), Gestionar Pedidos, Verificar Disponibilidad           |   Administrador          |
 
 
 ## 2. Requisitos Funcionales
