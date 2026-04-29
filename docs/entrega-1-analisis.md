@@ -129,6 +129,7 @@
 
 | Campo | Detalle |
 |---|---|
+<<<<<<< HEAD
 | **Actor principal** |  Administrador |
 | **Descripción** | Gestion de tabla-menu semanal|
 | **Precondiciones** |Iniciar sesión como administrador|
@@ -141,8 +142,49 @@
 | 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
 
 |
+=======
+| **Actor principal** | Empleado |
+| **Descripción** | Mantener datos actualizados |
+| **Precondiciones** | Tener una cuenta creada y haber iniciado secion |
+| **Postcondiciones (criterios de aceptación)** | Datos actualizados |
 
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario entra a su perfil | En caso de colocar un dato erroneo el sistema marcata el apartado en rojo y no permitira confirmar los datos |
+| 2. Toca en el apartado actualizar datos |  |
+| 3. Corrige los datos que desee |  |
+| 4. El sistema valida los datos a medida que el usuario los coloca |  |
+| 5. El usuario confirma el cambio de datos |  |
+>>>>>>> b001bc0b81ccccead93acbdaad2844bd8128bf5f
+
+ Campo | Detalle |
+|---|---|
+| **Actor principal** | empleado |
+| **Descripción** | Gestionar pedido |
+| **Precondiciones** | Estar registrado y haber iniciado sesion, debe haber una tabla de menu semanal cargada, debe haber registrado sus dias de asistencia.  |
+| **Postcondiciones (criterios de aceptación)** | El administrador recivira unanotificacion cuando el pedido sea confirmado  |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario accede a la tabla de menu semanal | En caso de no haber tabla de menu semanal cargada el usuario debe esperar a que la tabla sea cargada |
+| 2. El usuario visualiza las opciones de bianda para el/los dias que asistira | En caso de querer cambiar alguna de sus elecciones el usuario podra modificar el pedido |
+| 3. El usuario realiza su pedido  | En caso de querer realizar el pedido nuevamente  el usuario podra borrar su pedido |
+| 4. El usuario confirma su pedido |  |
 ---
+| Campo | Detalle |
+|---|---|
+| **Actor principal** | Empleado |
+| **Descripción** | Registrar dias de asistencia |
+| **Precondiciones** | haber iniciado sesion en el sistema |
+| **Postcondiciones (criterios de aceptación)** | Podra seleccionar una vianda para los dias que asistira |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario debe ingresar al apartado seleccionar dias de asistencia | En caso de haber cometido un error podra editarlo  |
+| 2. Debe seleccionar los dias que asistira a la empresa  |  |
+| 3. Debe confirmar los dias seleccionados |  |
+
+
 
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
