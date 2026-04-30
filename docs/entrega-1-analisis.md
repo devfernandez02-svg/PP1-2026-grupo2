@@ -93,9 +93,23 @@
 | 3.  |  |
 
 | Campo | Detalle |
+|---|---|
+| **Actor principal** | Empleado |
+| **Descripción** | Registrar dias de asistencia |
+| **Precondiciones** | haber iniciado sesion en el sistema |
+| **Postcondiciones (criterios de aceptación)** | Podra seleccionar una vianda para los dias que asistira |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario debe ingresar al apartado seleccionar dias de asistencia | En caso de haber cometido un error podra editarlo  |
+| 2. Debe seleccionar los dias que asistira a la empresa  |  |
+| 3. Debe confirmar los dias seleccionados |  |
+
+
+| Campo | Detalle |
 |--|--|
 | **Actor principal** | Empleado |
-| **Descripción** | Permite al empleado consultar el menu disponible del sistema |
+| **Descripción** |Consultar menu:Permite al empleado consultar el menu disponible del sistema |
 | **Precondiciones** | El usuario debe haber egistrado los dias de asistencia |
 | **Postcondiciones (criterios de aceptación)** | El empleado puede visualizar el menu de una forma correcta |
 
