@@ -162,5 +162,21 @@ Campo | Detalle |
 | 2.  |  |
 | 3.  |  |
 
+
+| Campo | Detalle |
+|--|--|
+| **Actor principal** |Administrador|
+| **Descripción** |Consultar pedido:Determinar la cantidad de viandas de cada tipo a realizar |
+| **Precondiciones** |Tener un usuario en el sistema,iniciar sesion como Administrador, Debe haber un registro de pedido confirmado. |
+| **Postcondiciones (criterios de aceptación)** | Una vez consultado, puede vizulizar los detalles de los pedidos realizados. |
+
+
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. Tiene que ir a la seccion de consulta pedidos | |
+| 2.  | |
+| 3.  |  |
+
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
