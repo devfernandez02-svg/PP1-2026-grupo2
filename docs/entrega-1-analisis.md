@@ -81,20 +81,6 @@
 
 | Campo | Detalle |
 |--|--|
-| **Actor principal** |  Administrador |
-| **Descripción** | Gestion de tabla-menu semanal|
-| **Precondiciones** |Iniciar sesión como administrador|
-| **Postcondiciones (criterios de aceptación)** | se sube la tabla de menu semanal |
-
-| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
-|---|---|
-| 1. el usuario accede al apartado de menu semanal|si hay una tabla subida el usiario debera eliminarla anted de subir la nueva |
-| 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
-| 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
-
-
-| Campo | Detalle |
-|--|--|
 | **Actor principal** | Empleado |
 | **Descripción** | Mantener datos actualizados |
 | **Precondiciones** | Tener una cuenta creada y haber iniciado secion |
@@ -119,18 +105,6 @@
 | 2. El sistema verifica la disponibilidad del menú |No hay menú disponible |
 | 3. El sistema muestra el menu con las viandas disponibles | |
 
-| Campo | Detalle |
-|---|---|
-| **Actor principal** | Administrador |
-| **Descripción** | Gestion de tabla-menu semanal|
-| **Precondiciones** |Iniciar sesión como administrador|
-| **Postcondiciones (criterios de aceptación)** | se sube la tabla de menu semanal |
-
-| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
-|---|---|
-| 1. el usuario accede al apartado de menu semanal|si hay una tabla subida el usiario debera eliminarla anted de subir la nueva |
-| 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
-| 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
 
 | Campo | Detalle |
 |---|---|
@@ -160,6 +134,21 @@
 | 1. Tiene que ir a la seccion de consulta pedidos | |
 | 2.  | |
 | 3.  | |
+
+
+| Campo | Detalle |
+|--|--|
+| **Actor principal** |  Administrador |
+| **Descripción** | Gestion de tabla-menu semanal|
+| **Precondiciones** |Iniciar sesión como administrador|
+| **Postcondiciones (criterios de aceptación)** | se sube la tabla de menu semanal |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. el usuario accede al apartado de menu semanal|si hay una tabla subida el usiario debera eliminarla anted de subir la nueva |
+| 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
+| 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
+
 
 
 | Campo | Detalle |
