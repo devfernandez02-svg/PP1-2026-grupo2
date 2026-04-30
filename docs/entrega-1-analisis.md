@@ -78,6 +78,9 @@
 
 ## 6. Especificación de Casos de Uso
 
+
+| Campo | Detalle |
+|--|--|
 | **Actor principal** |  Administrador |
 | **Descripción** | Gestion de tabla-menu semanal|
 | **Precondiciones** |Iniciar sesión como administrador|
@@ -89,8 +92,9 @@
 | 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
 | 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
 
-|
-=======
+
+| Campo | Detalle |
+|--|--|
 | **Actor principal** | Empleado |
 | **Descripción** | Mantener datos actualizados |
 | **Precondiciones** | Tener una cuenta creada y haber iniciado secion |
@@ -117,8 +121,7 @@
 
 | Campo | Detalle |
 |---|---|
-
-| **Actor principal** |  Administrador |
+| **Actor principal** | Administrador |
 | **Descripción** | Gestion de tabla-menu semanal|
 | **Precondiciones** |Iniciar sesión como administrador|
 | **Postcondiciones (criterios de aceptación)** | se sube la tabla de menu semanal |
@@ -129,6 +132,8 @@
 | 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
 | 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
 
+| Campo | Detalle |
+|---|---|
 | **Actor principal** | Empleado |
 | **Descripción** | Mantener datos actualizados |
 | **Precondiciones** | Tener una cuenta creada y haber iniciado secion |
@@ -154,7 +159,7 @@
 | 3. El sistema muestra el menu con las viandas disponibles | |
 | 1. Tiene que ir a la seccion de consulta pedidos | |
 | 2.  | |
-| 3.  |  |
+| 3.  | |
 
 
 | Campo | Detalle |
@@ -163,6 +168,12 @@
 | **Descripción** |Verificar Stock: disponibilidad de las viandas para avisar en caso de quedar sin stock. |
 | **Precondiciones** |Tener un usuario en el sistema,iniciar sesion como Administrador. |
 | **Postcondiciones (criterios de aceptación)** | Permite realizar pedidos, debido que hay stock |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1.  |  |
+| 2.  |  |
+| 3.  |  |
 
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
