@@ -119,6 +119,20 @@
 | 2. El sistema verifica la disponibilidad del menú |No hay menú disponible |
 | 3. El sistema muestra el menu con las viandas disponibles | |
 
+Campo | Detalle |
+|---|---|
+| **Actor principal** | empleado |
+| **Descripción** | Gestionar pedido |
+| **Precondiciones** | Estar registrado y haber iniciado sesion, debe haber una tabla de menu semanal cargada, debe haber registrado sus dias de asistencia.  |
+| **Postcondiciones (criterios de aceptación)** | El administrador recibir una notificacion cuando el pedido sea confirmado  |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario accede a la tabla de menu semanal | En caso de no haber tabla de menu semanal cargada el usuario debe esperar a que la tabla sea cargada |
+| 2. El usuario visualiza las opciones de bianda para el/los dias que asistira | En caso de querer cambiar alguna de sus elecciones el usuario podra modificar el pedido |
+| 3. El usuario realiza su pedido  | En caso de querer realizar el pedido nuevamente  el usuario podra borrar su pedido |
+| 4. El usuario confirma su pedido |  |
+
 
 | Campo | Detalle |
 |--|--|
