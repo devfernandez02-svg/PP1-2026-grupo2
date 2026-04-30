@@ -74,143 +74,10 @@
 > Insertar imagen del diagrama exportado desde Draw.io, Lucidchart, StarUML o similar.  
 > Guardar la imagen en esta misma carpeta (`docs/`) y referenciarla abajo.
 
-![Diagrama de Casos de Uso](./diagrama-casos-de-uso.png)
+![Diagrama de Casos de Uso](./Diagrama%20%20de%20caso%20de%20uso.png)
 
 ## 6. Especificación de Casos de Uso
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### CU-01 — [Nombre del caso de uso]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Campo | Detalle |
-|---|---|
-<<<<<<< HEAD
 | **Actor principal** |  Administrador |
 | **Descripción** | Gestion de tabla-menu semanal|
 | **Precondiciones** |Iniciar sesión como administrador|
@@ -235,10 +102,6 @@
 | 2.  |  |
 | 3.  |  |
 
----
-
-> Repetir la ficha completa para cada caso de uso del diagrama.
-> Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
 | Campo | Detalle |
 |--|--|
 | **Actor principal** | Empleado |
@@ -252,14 +115,9 @@
 | 2. El sistema verifica la disponibilidad del menú |No hay menú disponible |
 | 3. El sistema muestra el menu con las viandas disponibles | |
 
-
-
-
-
-
 | Campo | Detalle |
 |---|---|
-<<<<<<< HEAD
+
 | **Actor principal** |  Administrador |
 | **Descripción** | Gestion de tabla-menu semanal|
 | **Precondiciones** |Iniciar sesión como administrador|
@@ -271,8 +129,6 @@
 | 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
 | 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
 
-|
-=======
 | **Actor principal** | Empleado |
 | **Descripción** | Mantener datos actualizados |
 | **Precondiciones** | Tener una cuenta creada y haber iniciado secion |
@@ -284,10 +140,6 @@
 | 2.  |  |
 | 3.  |  |
 
----
-
-> Repetir la ficha completa para cada caso de uso del diagrama.
-> Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
 | Campo | Detalle |
 |--|--|
 | **Actor principal** | Empleado |
@@ -311,3 +163,6 @@
 | **Descripción** |Verificar Stock: disponibilidad de las viandas para avisar en caso de quedar sin stock. |
 | **Precondiciones** |Tener un usuario en el sistema,iniciar sesion como Administrador. |
 | **Postcondiciones (criterios de aceptación)** | Permite realizar pedidos, debido que hay stock |
+
+> Repetir la ficha completa para cada caso de uso del diagrama.
+> Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
