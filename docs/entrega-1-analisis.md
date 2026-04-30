@@ -107,36 +107,6 @@
 
 
 | Campo | Detalle |
-|---|---|
-| **Actor principal** | Empleado |
-| **Descripción** | Mantener datos actualizados |
-| **Precondiciones** | Tener una cuenta creada y haber iniciado secion |
-| **Postcondiciones (criterios de aceptación)** | Datos actualizados |
-
-| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
-|---|---|
-| 1.  |  |
-| 2.  |  |
-| 3.  |  |
-
-| Campo | Detalle |
-|--|--|
-| **Actor principal** | Empleado |
-| **Descripción** | Permite al empleado consultar el menu disponible del sistema |
-| **Precondiciones** | El usuario debe haber egistrado los dias de asistencia |
-| **Postcondiciones (criterios de aceptación)** | El empleado puede visualizar el menu de una forma correcta |
-
-| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
-|--|--|
-| 1. El empleado ingresa al apartado de menú | |
-| 2. El sistema verifica la disponibilidad del menú |No hay menú disponible |
-| 3. El sistema muestra el menu con las viandas disponibles | |
-| 1. Tiene que ir a la seccion de consulta pedidos | |
-| 2.  | |
-| 3.  | |
-
-
-| Campo | Detalle |
 |--|--|
 | **Actor principal** |  Administrador |
 | **Descripción** | Gestion de tabla-menu semanal|
