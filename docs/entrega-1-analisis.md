@@ -12,29 +12,24 @@
 |-------|-----------------------------|---------------------------------------------|
 | Empleado      |    Iniciar Sesion, registrarme, mantener Datos actualizados, gestionar Pedidos, Consultar menu(semanal), Configurar dias de Asistencia          |   Usuario Final          |
 |Administrador  |    Registrarse,iniciar sesion, gestionar Menu(semanal), Gestionar Pedidos, Verificar Disponibilidad           |   Administrador          |
-
+|System        |    Enviar notificacion                                             | Sistema externo      |
 
 ## 2. Requisitos Funcionales
 
 | ID    | Descripción                                                                        | Actor          | HU relacionada |
 |-------|------------------------------------------------------------------------------------|----------------|----------------|
-| RF-01 |El sistema debe permitir Debe registrarse para crear un usuario.         |empelado        |  HU-1              |
-| RF-02 |El sistema debe permitir iniciar secion con las credenciales del usuario para poder entrar al sistema.                  |empleado        |  HU-2              |
-| RF-03 |El sistema debe permitir Mantener datos actualizados para poder ver siempre la informacion de usuario al dia.|empleado        |  HU-3              |
-| RF-04 |El sistema debe permitir Modificar Pedidos debe permitir cambiar o seleccionar otra opcion de pedido.        |empleado        |  HU-4              |
-| RF-05 |El sistema debe permitir Confirmar pedido debe permitir reservar y demostrar que todo salio correcto.        |empleado        |  HU-4              |
-| RF-06 |El sistema debe permitir Cancelar pedido debe Cancelar el pedido en caso de error o inconveniente.           |empleado        |  HU-4              |
-| RF-07 |El sistema debe permitir que el empleado realice un pedido de vianda                |empleado        | HU-4               |
-| RF-08 |El sistema debe permitir que el empleado consulte el menu disponible                |empleado        | HU-5               |
-| RF-09 |El sistema debe permitir que el empleado configure sus dias de asistencia           |empleado        | HU-6               |
-| RF-10 |El sistema debe permitir que el administrador se registre en el sistema, para crear un usuario             |Administrador   | HU-7               |
-| RF-11 |El sistema debe permitir que el administrador gestione los pedidos                  |Administrador   | HU-10               |
-| RF-12 |El sistema debe permitir agregar un menu para cargar las viandas que habra semanalmente |Administrador|  HU-9             |
-| RF-13 |El sistema debe permitir modificar el menu semanal para poder corregir errores o solucionar inconvenientes que surjan en el momento. |Administrador |  HU-9       |          
-| RF-14 |El sistema debe permitir eliminar el menu semanal para poder cargar el nuevo |Administrador           | HU-9               |
-| RF-15 |El sistema debe poder notificar al administrador sobre los detalles de los pedidos confirmados|Externo| HU-12 |
-| RF-16 |El sistema debe permitir verificar la disponibilidad de las viandas para avisar en caso de quedar sin stock. |Administrador |   HU-11      |
-| RF-17 |El sistema debe permitir inicair sesion para ingresar al sistema con su usuario | administrador      | HU-4              |
+| RF-01|El sistema debe permitir Realizar Pedidos un pedido de vianda                        |empleado                         |  HU-1      |
+| RF-02 |El sistema debe permitir Confirmar pedido debe permitir reservar y demostrar que todo salio correcto.|empleado        |  HU-2      |
+| RF-03 |El sistema debe permitir Cancelar pedido debe Cancelar el pedido en caso de error o inconveniente.   |empleado        |  HU-3      |
+| RF-04 |El sistema debe permitir que el empleado Modifique  el  pedido.                     |empleado                         | HU-4               |
+| RF-05 |El sistema debe permitir que el empleado consulte el menu disponible                |empleado                         | HU-5 |
+| RF-06 |El sistema debe permitir que el empleado configure sus dias de asistencia           |empleado                         | HU-6  |
+| RF-07 |El sistema debe permitir que el administrador Agregar borrador de menu              |Administrador   | HU-07 
+| RF- 08  |El sistema debe permitir Editar Menu       |  Administrador| HU-08 |
+| RF- 09  |El sistema debe permitir Eliminar Menu     |Administrador| HU-09 |
+| RF- 10  |El sistema debe permitir Confirmar Menu    |Administrador| HU-10 |
+| RF-11 |El sistema debe permitir editar la tabla lista del dia. |System |   HU-12    |
+| RF-12 |El sistema debe permitir enviar al administrador la lista del dia| System | HU-13|
 
 > Cada requisito debe describir una acción concreta: "El sistema debe permitir que [actor] [acción]..."
 
@@ -56,19 +51,19 @@
 
 | ID    | Como...       | Quiero...                  | Para...                            |
 |-------|---------------|----------------------------|------------------------------------|
-| HU-01 | Empleado      | Registrarme                | Tener un usuario en el sistema     |
-| HU-02 | Empleado      | Iniciar Sesion             | Ingresar al sistema con mi usuario |
-| HU-03 | Empleado      | Actualizar datos           | Tener la informacion constantemente actualizada |
-| HU-04 | Empleado      | Gestionar mi pedido de vianda | Pedir la bianda de cada dia |
-| HU-05 | Empleado      | Consultar el menu semanal  | Seleccionar las viandas de la semana |            
-| HU-06 | Empleado      | configurar dias de asistencia | Deteminar que dias debo seleccionar vianda |
-| HU-07 | Administrador | Registrarme                | Tener un usuario                    |
-| HU-08 | Administrador | Iniciar Sesion             | Ingresar al sistema con mi usuario  |
-| HU-09 | Administrador | Administre el menu semanal | Notificar a los usuarios los tipos de vianda disponibles |
-| HU-10 | Administrador | Gestione los pedidos       | Determinar la cantidad de viandas de cada tipo a realizar |
+| HU-01 | Empleado      | Realizar pedido            | Para crear un borrador,antes de confirmar el pedido.|
+| HU-02 | Empleado      | Confirmar Pedido           | Para poder validar y enviar notificacion con los detalles.|
+| HU-03 | Empelado      | Eliminar Pedido            | En caso de error o falla cancela el pedido.|
+| HU-04 | Empelado      | Modificar Pedido           | realizar cambios previo o post confirmacion. |
+| HU-05 | Empleado      | Consultar el menu semanal  | Seleccionar las viandas de la semana. |            
+| HU-06 | Empleado      | configurar dias de asistencia | Deteminar que dias debo seleccionar vianda. |
+| HU-07 | Administrador | Agregar borrador menu         | Para poder cargar un menu,previo a que lo vean los usuarios.|
+| HU-08 | Administrador | Editar      Menu                   | Para poder realizar cambios en el menu.|
+| HU-09 | Administrador | Eliminar    Menu                   | Para poder descartar un menu.|
+| HU-10 | Administrador | Confirmar   Menu                   |Permitir el acceso a los empleados al menu.|
 | HU-11 | Administrador | Verificar la disponibilidad de las viandas | Avisar en caso de quedar sin stock |
-| HU-12 | Externo       | Notificar al administrador cuando los pedidos sean confirmados| Facilitar el conteo de las viandas a realizar o poder avisar a los empleados cuando alguna vianda quede sin stock |
-
+| HU-12 | System       | Modificar la tabla lista del dia | Para llevar un registro de las viandas que deben realizarse cada dias.|
+| HU-13 | System       | Enviar la tabla al Administrador.| Para que al cierre del dia el administrador reciba un informe de las viandas que debe realizar al dia siguiente.|
 ## 5. Diagrama de Casos de Uso
 
 > Insertar imagen del diagrama exportado desde Draw.io, Lucidchart, StarUML o similar.  
