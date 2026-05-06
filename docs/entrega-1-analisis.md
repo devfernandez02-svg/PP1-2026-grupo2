@@ -20,7 +20,7 @@
 |-------|------------------------------------------------------------------------------------|----------------|----------------|
 | RF-01|El sistema debe permitir Realizar Pedidos un pedido de vianda                        |empleado                         |  HU-1      |
 | RF-02 |El sistema debe permitir Confirmar pedido debe permitir reservar y demostrar que todo salio correcto.|empleado        |  HU-2      |
-| RF-03 |El sistema debe permitir Cancelar pedido debe Cancelar el pedido en caso de error o inconveniente.   |empleado        |  HU-3      |
+| RF-03 |El sistema debe permitir Eliminar pedido debe Cancelar el pedido en caso de error o inconveniente.   |empleado        |  HU-3      |
 | RF-04 |El sistema debe permitir que el empleado Modifique  el  pedido.                     |empleado                         | HU-4               |
 | RF-05 |El sistema debe permitir que el empleado consulte el menu disponible                |empleado                         | HU-5 |
 | RF-06 |El sistema debe permitir que el empleado configure sus dias de asistencia           |empleado                         | HU-6  |
@@ -28,8 +28,9 @@
 | RF- 08  |El sistema debe permitir Editar Menu       |  Administrador| HU-08 |
 | RF- 09  |El sistema debe permitir Eliminar Menu     |Administrador| HU-09 |
 | RF- 10  |El sistema debe permitir Confirmar Menu    |Administrador| HU-10 |
-| RF-11 |El sistema debe  generar la tabla consolidado diario al cierre del dia. |System |   HU-12    |
-| RF-12 |El sistema debe permitir notificar detalles de los pedidos confirmados| System | HU-13|
+| RF- 11  |El sistema debe permitir verificar disponibilidad de las viandas   |Administrador| HU-11 |
+| RF-12 |El sistema debe  generar la tabla consolidado diario al cierre del dia. |System |   HU-12    |
+| RF-13 |El sistema debe permitir notificar detalles de los pedidos confirmados| System | HU-13|
 
 > Cada requisito debe describir una acción concreta: "El sistema debe permitir que [actor] [acción]..."
 
