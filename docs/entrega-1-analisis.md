@@ -28,8 +28,8 @@
 | RF- 08  |El sistema debe permitir Editar Menu       |  Administrador| HU-08 |
 | RF- 09  |El sistema debe permitir Eliminar Menu     |Administrador| HU-09 |
 | RF- 10  |El sistema debe permitir Confirmar Menu    |Administrador| HU-10 |
-| RF-11 |El sistema debe permitir editar la tabla lista del dia. |System |   HU-12    |
-| RF-12 |El sistema debe permitir enviar al administrador la lista del dia| System | HU-13|
+| RF-11 |El sistema debe  generar la tabla consolidado diario al cierre del dia. |System |   HU-12    |
+| RF-12 |El sistema debe permitir notificar detalles de los pedidos confirmados| System | HU-13|
 
 > Cada requisito debe describir una acción concreta: "El sistema debe permitir que [actor] [acción]..."
 
@@ -62,14 +62,14 @@
 | HU-09 | Administrador | Eliminar    Menu                   | Para poder descartar un menu.|
 | HU-10 | Administrador | Confirmar   Menu                   |Permitir el acceso a los empleados al menu.|
 | HU-11 | Administrador | Verificar la disponibilidad de las viandas | Avisar en caso de quedar sin stock |
-| HU-12 | System       | Modificar la tabla lista del dia | Para llevar un registro de las viandas que deben realizarse cada dias.|
-| HU-13 | System       | Enviar la tabla al Administrador.| Para que al cierre del dia el administrador reciba un informe de las viandas que debe realizar al dia siguiente.|
+| HU-12 | System       | Generar la tabla consolidado diario | Para llevar un registro de las viandas que deben realizarse cada dias.|
+| HU-13 | System       | Notificar pedido al Administrador.| Para que  el administrador reciba una notificacion  con los detalles de los pedidos confirmados.|
 ## 5. Diagrama de Casos de Uso
 
 > Insertar imagen del diagrama exportado desde Draw.io, Lucidchart, StarUML o similar.  
 > Guardar la imagen en esta misma carpeta (`docs/`) y referenciarla abajo.
 
-![Diagrama de Casos de Uso](./Diagrama_caso_de_%20uso(2).png)
+![Diagrama de Casos de Uso](./Diagrama_caso_de_%20uso(5).png)
 
 ## 6. Especificación de Casos de Uso
 
