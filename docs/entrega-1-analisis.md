@@ -174,5 +174,35 @@ Campo | Detalle |
 | 2.  | |
 | 3.  |  |
 
+| Campo | Detalle |
+|---|---|
+| **Actor principal** |Empleado |
+| **Descripción** | Realizar pedido |
+| **Precondiciones** |El empleado debe haber iniciado sesión y tener un menú disponible para realizar el pedido..|
+| **Postcondiciones (criterios de aceptación)** | El pedido queda realizado correctamente |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario accede a la tabla de menu semanal | En caso de no existir un menú cargado, el sistema informará que no hay disponibilidad |
+| 2. El usuario visualiza las opciones de viandas disponibles | En caso de no haber stock de una vianda, el sistema lo notificara |
+| 3. El usuario selecciona la vianda de los dias que asistira | En caso de seleccionar una opcion incorrecta la podra modificar |
+| 4. El usuario realiza el pedido | En caso de querer cancelar el pedido, podra eliminarlo |
+| 5. El sistema registra el pedido realizado |  |
+
+| Campo | Detalle |
+|---|---|
+| **Actor principal** |Empleado |
+| **Descripción** | Confirmar pedido |
+| **Precondiciones** |El empleado debe haber realizado un pedido |
+| **Postcondiciones (criterios de aceptación)** | El pedido queda confirmado correctamente |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario accede a seccion de pedidos ||
+| 2. El usuario visualiza el pedido realizado | En caso de no existir un pedido, el sistema lo notificara |
+| 3. El usuario verifica los datos del pedido | En caso de que el pedido tenga un error, podra modificar el pedido |
+| 4. El usuario confirma el pedido ||
+| 5. El sistema registra la confirmacion del pedido | En caso de que el sistema tenga un error, el pedido no podra confirmarse |
+
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
