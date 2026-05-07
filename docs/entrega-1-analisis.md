@@ -115,36 +115,6 @@
 | 2. El sistema verifica la disponibilidad del menú |No hay menú disponible |
 | 3. El sistema muestra el menu con las viandas disponibles | |
 
-Campo | Detalle |
-|---|---|
-| **Actor principal** | empleado |
-| **Descripción** | Gestionar pedido |
-| **Precondiciones** | Estar registrado y haber iniciado sesion, debe haber una tabla de menu semanal cargada, debe haber registrado sus dias de asistencia.  |
-| **Postcondiciones (criterios de aceptación)** | El administrador recibir una notificacion cuando el pedido sea confirmado  |
-
-| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
-|---|---|
-| 1. El usuario accede a la tabla de menu semanal | En caso de no haber tabla de menu semanal cargada el usuario debe esperar a que la tabla sea cargada |
-| 2. El usuario visualiza las opciones de bianda para el/los dias que asistira | En caso de querer cambiar alguna de sus elecciones el usuario podra modificar el pedido |
-| 3. El usuario realiza su pedido  | En caso de querer realizar el pedido nuevamente  el usuario podra borrar su pedido |
-| 4. El usuario confirma su pedido |  |
-
-
-| Campo | Detalle |
-|--|--|
-| **Actor principal** |  Administrador |
-| **Descripción** | Gestion de tabla-menu semanal|
-| **Precondiciones** |Iniciar sesión como administrador|
-| **Postcondiciones (criterios de aceptación)** | se sube la tabla de menu semanal |
-
-| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
-|---|---|
-| 1. el usuario accede al apartado de menu semanal|si hay una tabla subida el usiario debera eliminarla anted de subir la nueva |
-| 2. el usuario añade un menu semanal  |en caso de colocar un dato erroneo y que el sistema lo detecte no permitira que suba a la tabla y marcara el dato en rojo |
-| 3. el usuario confirma la tabla |en caso de haber colocado un dato mal, el usuario podra modificar la tabla a voluntad |
-
-
-
 | Campo | Detalle |
 |---|---|
 | **Actor principal** |Administrador|
@@ -229,6 +199,48 @@ Campo | Detalle |
 | 1. El usuario accede al apartado de pedidos | En caso de no existir pedidos registrados el sistema informará al usuario |
 | 2. El usuario selecciona el pedido que desea eliminar | |
 | 3. El sistema solicita confirmación para eliminar el pedido | |
+
+| Campo | Detalle |
+|---|---|
+| **Actor principal** | Administrador |
+| **Descripción** | Modificar menu |
+| **Precondiciones** | Debe haber una tabla de menu semanal cargada |
+| **Postcondiciones (criterios de aceptación)** | El empleado  debe visualizar la tabla actualizada |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. Ingresa al apartado menu semanal | Si cancela la modificacion la tabla quedara comoestaba |
+| 2. Selecciona la tabla a modificar |  |
+| 3. Realizalos cambios  |  |
+| 4. Confirma los cambios |  |
+
+| Campo | Detalle |
+|---|---|
+| **Actor principal** | Administrador |
+| **Descripción** | Confirmar menu |
+| **Precondiciones** | Se debe estar modificndo una tabla o subiendo un borrador |
+| **Postcondiciones** (criterios de aceptación)* | El empleado podra visualizar la nueva tabla |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1.  |  |
+| 2. |  |
+| 3. |  |
+| 4. |  |
+
+|Campo | Detalle |
+|---|---|
+| **Actor principal** | Administrador |
+| **Descripción** | Eliminar menu semanal |
+| **Precondiciones** |  Que haya menu semanal cargado |
+| **Postcondiciones** (criterios de aceptación)* | Tabla de menu semanal eliminada  |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1.El administrador carga la tabla del menú semanal |El menú tiene campos vacíos, el sistema no permite cargarlo |
+| 2.El administrador elimina la tabla del menú semanal |  |
+| 3. |  |
+| 4. |  |
 
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
