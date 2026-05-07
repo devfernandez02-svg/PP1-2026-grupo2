@@ -204,5 +204,31 @@ Campo | Detalle |
 | 4. El usuario confirma el pedido ||
 | 5. El sistema registra la confirmacion del pedido | En caso de que el sistema tenga un error, el pedido no podra confirmarse |
 
+| Campo | Detalle |
+|---|---|
+| **Actor principal** | Empleado |
+| **Descripción** | Modificar pedido |
+| **Precondiciones** | Tener un pedido cargado |
+| **Postcondiciones (criterios de aceptación)** | Confirmar pedido |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario accede al apartado de pedidos | En caso de no existir pedidos registrados el sistema informará al usuario |
+| 2. El usuario selecciona el pedido que desea modificar | |
+| 3. El usuario realiza los cambios correspondientes | En caso de querer cancelar la modificación el pedido quedará igual |
+
+| Campo | Detalle |
+|---|---|
+| **Actor principal** | Empleado |
+| **Descripción** | Eliminar pedido |
+| **Precondiciones** | Tener un pedido registrado |
+| **Postcondiciones (criterios de aceptación)** | Pedido eliminado correctamente |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario accede al apartado de pedidos | En caso de no existir pedidos registrados el sistema informará al usuario |
+| 2. El usuario selecciona el pedido que desea eliminar | |
+| 3. El sistema solicita confirmación para eliminar el pedido | |
+
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
