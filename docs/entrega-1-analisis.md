@@ -189,5 +189,20 @@ Campo | Detalle |
 | 4. El usuario realiza el pedido | En caso de querer cancelar el pedido, podra eliminarlo |
 | 5. El sistema registra el pedido realizado |  |
 
+| Campo | Detalle |
+|---|---|
+| **Actor principal** |Empleado |
+| **Descripción** | Confirmar pedido |
+| **Precondiciones** |El empleado debe haber realizado un pedido |
+| **Postcondiciones (criterios de aceptación)** | El pedido queda confirmado correctamente |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El usuario accede a seccion de pedidos ||
+| 2. El usuario visualiza el pedido realizado | En caso de no existir un pedido, el sistema lo notificara |
+| 3. El usuario verifica los datos del pedido | En caso de que el pedido tenga un error, podra modificar el pedido |
+| 4. El usuario confirma el pedido ||
+| 5. El sistema registra la confirmacion del pedido | En caso de que el sistema tenga un error, el pedido no podra confirmarse |
+
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
