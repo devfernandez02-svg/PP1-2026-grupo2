@@ -79,7 +79,7 @@
 |--|--|
 | **Actor principal** | Empleado |
 | **Descripción** | Mantener datos actualizados |
-| **Precondiciones** | Tener una cuenta creada y haber iniciado secion |
+| **Precondiciones** | Tener una cuenta creada y haber iniciado sesión. |
 | **Postcondiciones (criterios de aceptación)** | Datos actualizados |
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
@@ -91,8 +91,8 @@
 | Campo | Detalle |
 |---|---|
 | **Actor principal** | Empleado |
-| **Descripción** | Registrar dias de asistencia |
-| **Precondiciones** | haber iniciado sesion en el sistema |
+| **Descripción** | Configurar asistencia |
+| **Precondiciones** | haber iniciado sesión en el sistema |
 | **Postcondiciones (criterios de aceptación)** | Podra seleccionar una vianda para los dias que asistira |
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
@@ -105,8 +105,8 @@
 | Campo | Detalle |
 |--|--|
 | **Actor principal** | Empleado |
-| **Descripción** |Consultar menu:Permite al empleado consultar el menu disponible del sistema |
-| **Precondiciones** | El usuario debe haber egistrado los dias de asistencia |
+| **Descripción** |Consultar menu|
+| **Precondiciones** | El usuario debe haber registrado los dias de asistencia |
 | **Postcondiciones (criterios de aceptación)** | El empleado puede visualizar el menu de una forma correcta |
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
