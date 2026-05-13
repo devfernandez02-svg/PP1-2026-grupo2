@@ -87,7 +87,7 @@
 > Insertar imagen del diagrama exportado desde Draw.io, Lucidchart, StarUML o similar.  
 > Guardar la imagen en esta misma carpeta (`docs/`) y referenciarla abajo.
 
-![Diagrama de Casos de Uso](./Diagrama_caso_de_%20uso(5).png)
+![Diagrama de Casos de Uso](./Diagrama_de_caso_de_uso(6).png)
 
 ## 6. Especificación de Casos de Uso
 
