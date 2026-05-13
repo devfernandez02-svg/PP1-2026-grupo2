@@ -176,7 +176,7 @@
 | Campo | Detalle |
 |---|---|
 | **Actor principal** | Administrador |
-| **Descripción** | Modificar/Real Menu |
+| **Descripción** | Modificar/Realizar Menu |
 | **Precondiciones** | Debe haber una tabla de menu semanal cargada |
 | **Postcondiciones (criterios de aceptación)** | El empleado  debe visualizar la tabla actualizada |
 
