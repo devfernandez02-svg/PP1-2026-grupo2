@@ -26,14 +26,14 @@
 | RF-05 |El sistema debe permitir que el empleado consulte el menu disponible                |empleado                         | HU-5     |
 | RF-06 |El sistema debe permitir que el empleado configure sus dias de asistencia           |empleado                         | HU-6     |
 | RF-07  |El sistema debe filtar la vizualizacion del menu semanal, de acuerdo con los dias de asistencia configurados por el empleado. | empleado   | HU-7  |
-| RF-08 |El sistema debe permitir que el administrador Agregar borrador de menu              |Administrador   | HU-08 | 
-| RF- 09|El sistema debe permitir Editar Menu       |  Administrador| HU-09 |
+| RF-08 |El sistema debe permitir que el administrador Realizar  menu              |Administrador   | HU-08 | 
+| RF- 09|El sistema debe permitir Modificar Menu       |  Administrador| HU-09 |
 | RF- 10|El sistema debe permitir Eliminar Menu     |Administrador| HU-10 |
 | RF- 11|El sistema debe permitir Confirmar Menu    |Administrador| HU-11 |
 | RF- 12|El sistema debe permitir  que el administrador excluya los dias feriados.   |Administrador| HU-12 |
 | RF- 13 |El sistema debe permitir configurar roles,activar y descativar cuentas    |Administrador| HU-13 | 
-| RF-15 |El sistema debe  permitir vizualizar la tabla consolidado diario para llevar un conteo de pedidos  |Administrador |   HU-14    |
-| RF-14|El sistema debe permitir verificar disponibilidad de las viandas   |Administrador| HU-15 |
+| RF-14 |El sistema debe  permitir vizualizar la tabla consolidado diario para llevar un conteo de pedidos  |Administrador |   HU-14    |
+| RF-15|El sistema debe permitir verificar disponibilidad de las viandas   |Administrador| HU-15 |
 | RF-16 |El sistema debe  generar la tabla consolidado diario al incio del dia y actualizrarla en tiempo real. |System |   HU-16    |
 | RF-17 |El sistema debe permitir notificar detalles de los pedidos confirmados| System | HU-17|
 | RF-18 |El sistema debe  permitir enviar notificaciones automaticas por correo a los empleados, que no hayan confirmado su pedido antes del  plazo limite. |System |   HU-18    |
@@ -71,8 +71,8 @@
 | HU-05 | Empleado      | Consultar el menu semanal  | Seleccionar las viandas de la semana. |            
 | HU-06 | Empleado      | configurar dias de asistencia | Deteminar que dias debo seleccionar vianda. |
 | HU-07 | Empleado      | Filtrar menu semanal          | Para que el empleado pueda vizualizar las viandas solo los dias que asistira.   |
-| HU-08 | Administrador | Agregar borrador menu         | Para poder cargar un menu,previo a que lo vean los usuarios.|
-| HU-09 | Administrador | Editar      Menu              | Para poder realizar cambios en el menu.|
+| HU-08 | Administrador | Realizar menu                   | Para poder cargar un menu,previo a que lo vean los usuarios.|
+| HU-09 | Administrador | Modificar     Menu              | Para poder realizar cambios en el menu.|
 | HU-10 | Administrador | Eliminar    Menu              | Para poder descartar un menu.|
 | HU-11 | Administrador | Confirmar   Menu              |Permitir el acceso a los empleados al menu.|
 | HU-12 | Administrador | Informar Feridos              |Permitir el empleado tenga en cuenta  los feriados, a la hora de configurar sus dias de asistencia.|
@@ -127,23 +127,6 @@
 |
 
 
-
-
-| Campo | Detalle |
-|--|--|
-| **Actor principal** |Administrador|
-| **Descripción** |Consultar pedido:Determinar la cantidad de viandas de cada tipo a realizar |
-| **Precondiciones** |Tener un usuario en el sistema,iniciar sesion como Administrador, Debe haber un registro de pedido confirmado. |
-| **Postcondiciones (criterios de aceptación)** | Una vez consultado, puede vizulizar los detalles de los pedidos realizados. |
-
-
-
-| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
-|---|---|
-| 1. Tiene que ir a la seccion de consulta pedidos | |
-| 2.  | |
-| 3.  |  |
-
 | Campo | Detalle |
 |---|---|
 | **Actor principal** |Empleado |
@@ -193,44 +176,89 @@
 | Campo | Detalle |
 |---|---|
 | **Actor principal** | Administrador |
-| **Descripción** | Modificar  |
+| **Descripción** | Modificar/Real Menu |
 | **Precondiciones** | Debe haber una tabla de menu semanal cargada |
 | **Postcondiciones (criterios de aceptación)** | El empleado  debe visualizar la tabla actualizada |
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
 | 1. Ingresa al apartado menu semanal | Si cancela la modificacion la tabla quedara comoestaba |
-| 2. Selecciona la tabla a modificar |  |
-| 3. Realizalos cambios  |  |
-| 4. Confirma los cambios |  |
+| 2. Selecciona un dia a modificar  | |
+| 3. El sistema manda un formulario con campos: nombre, descripción, cantidad disponible. |  |
+| 4. El administrador completa el formulario y confirma.| |
+| 5. El sistema guarda la opción y la hace visible en el menú del empleado.  |  |
+
 
 | Campo | Detalle |
 |---|---|
 | **Actor principal** | Administrador |
-| **Descripción** | Confirmar menu |
-| **Precondiciones** | Se debe estar modificndo una tabla o subiendo un borrador |
-| **Postcondiciones** (criterios de aceptación)* | El empleado podra visualizar la nueva tabla |
+| **Descripción** | Vizualizar pedido |
+| **Precondiciones** | Debe haber iniciado sesion, Existan pedidos reigstrados para el dia/semana seleccionada  |
+| **Postcondiciones** (criterios de aceptación)* | El administrador tiene visibilidad del conteo de pedidos por menu para organizar la preparacion |
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1.  |  |
-| 2. |  |
-| 3. |  |
-| 4. |  |
+| 1.  El administrador accede al panel "Pedidos" ||
+| 2.  El sistema muestra por defecto el día actual con el conteo de cada opción de menú solicitada |No hay pedidos para el día seleccionado para eso el sistema muestra un mensaje informativo con conteo en cero. |
+| 3.  El administrador puede filtrar por otro día de la semana |  |
+| 4.  El sistema actualiza la vista en tiempo real sin necesidad de recargar la página | |
+| 5. El administrador puede exportar o imprimir la lista diaria para la cocina. ||
 
 |Campo | Detalle |
 |---|---|
 | **Actor principal** | Administrador |
-| **Descripción** | Eliminar menu semanal |
+| **Descripción** | Eliminar menu  |
 | **Precondiciones** |  Que haya menu semanal cargado |
 | **Postcondiciones** (criterios de aceptación)* | Tabla de menu semanal eliminada  |
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1.El administrador carga la tabla del menú semanal |El menú tiene campos vacíos, el sistema no permite cargarlo |
-| 2.El administrador elimina la tabla del menú semanal |  |
-| 3. |  |
-| 4. |  |
+| 1. El administrador selecciona una opción de menú y presiona "Eliminar"  |El menú tiene campos vacíos, el sistema no permite cargarlo |
+| 2. El sistema verifica que no existan pedidos confirmados para esa opción. | |
+| 3. El sistema solicita confirmación de la acción.|  |
+| 4. El administrador confirma entonces el sistema elimina la opción del menú. |  |
+
+| Campo | Detalle |
+|--|--|
+| **Actor principal** |Administrador|
+| **Descripción** | Gestionar Feriados |
+| **Precondiciones** | Tener la sesion como administrador iniciada. |
+| **Postcondiciones (criterios de aceptación)** | Los días feriados quedan marcados en el sistema. Los empleados no pueden realizar pedidos en esas fechas.  |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1. El administrador ingresa a la seccion configurar dias de asistencias |  Para desmarcar un feriado,por error, con seleccionarla de vuelta, vuelve a su estado original.|
+| 2.  El administrador selecciona los dias correspondientes y los marca como feriados. | |
+| 3.   Confirma los cambios  |  |
+| 4. El sistema actualiza y los refleja en la tabla de los usuarios.| |
+
+| Campo | Detalle |
+|--|--|
+| **Actor principal** |System|
+| **Descripción** |Notificar plazo Expirado |
+| **Precondiciones** |que la fecha y horario limite haya expirado, que el empleado no haya realizado un pedido |
+| **Postcondiciones (criterios de aceptación)** | El empleado es notificado que no recibira la vianda |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1.  El sistema evalúa, en el horario configurado, qué empleados no han confirmado su pedido para la semana en curso ||
+| 2.  El sistema genera un correo de recordatorio personalizado para cada empleado pendiente.| |
+| 3. El sistema envía los correos a través del Mail Server.  |  |
+| 4. El sistema registra las notificaciones enviadas con fecha, destinatario y resultado. | |
+
+| Campo | Detalle |
+|--|--|
+| **Actor principal** |System|
+| **Descripción** | Generar lista |
+| **Precondiciones** |Debe haber un menu cargado|
+| **Postcondiciones (criterios de aceptación)** | Al cierre del dia la lista queda guardada  |
+
+| Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
+|---|---|
+| 1.  La lista se crea a la apertura del dia, tomando los datos de los menues de ese dia  con la tabla menu semanal | |
+| 2.  Se hace un conteo de los pedidos registrados |  |
+| 3.  |  |
+
 
 > Repetir la ficha completa para cada caso de uso del diagrama.
 > Las excepciones se numeran ligadas al paso del que se desvían (ej: 4.1 en la misma fila que el paso 4).
