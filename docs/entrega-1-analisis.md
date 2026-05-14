@@ -182,11 +182,11 @@
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1. Ingresa al apartado menu semanal | Si cancela la modificacion la tabla quedara comoestaba |
+| 1. Ingresa al apartado menu semanal |  |
 | 2. Selecciona un dia a modificar  | |
 | 3. El sistema manda un formulario con campos: nombre, descripción, cantidad disponible. |  |
 | 4. El administrador completa el formulario y confirma.| |
-| 5. El sistema guarda la opción y la hace visible en el menú del empleado.  |  |
+| 5. El sistema guarda la opción y la hace visible en el menú del empleado.  | Si cancela la modificacion la tabla quedara como estaba  |
 
 
 | Campo | Detalle |
@@ -213,7 +213,7 @@
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1. El administrador selecciona una opción de menú y presiona "Eliminar"  |El menú tiene campos vacíos, el sistema no permite cargarlo |
+| 1. El administrador selecciona una opción de menú y presiona "Eliminar"  | |
 | 2. El sistema verifica que no existan pedidos confirmados para esa opción. | |
 | 3. El sistema solicita confirmación de la acción.|  |
 | 4. El administrador confirma entonces el sistema elimina la opción del menú. |  |
@@ -227,8 +227,8 @@
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1. El administrador ingresa a la seccion configurar dias de asistencias |  Para desmarcar un feriado,por error, con seleccionarla de vuelta, vuelve a su estado original.|
-| 2.  El administrador selecciona los dias correspondientes y los marca como feriados. | |
+| 1. El administrador ingresa a la seccion configurar dias de asistencias |  |
+| 2.  El administrador selecciona los dias correspondientes y los marca como feriados. | Si cancela la modificacion la tabla quedara como estaba |
 | 3.   Confirma los cambios  |  |
 | 4. El sistema actualiza y los refleja en la tabla de los usuarios.| |
 
