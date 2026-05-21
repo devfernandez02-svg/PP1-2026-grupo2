@@ -102,10 +102,10 @@
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1. El usuario debe ingresar al apartado  gestionar asistencia | En caso de haber cometido un error podra editarlo  |
+| 1. El usuario debe ingresar al apartado  gestionar asistencia |  |
 | 2. El sistema muestra los días de la semana (lunes a viernes) con el estado actual de cada uno  |  |
 | 3. Debe seleccionaer los dias que asistira |El empleado no selecciona ningún día entonces el sistema muestra un mensaje de advertencia indicando que sin días de asistencia no se generarán pedidos.  |
-| 4. El empleado confirma los cambios. | |
+| 4. El empleado confirma los cambios. | En caso de haber cometido un error podra editarlo  |
 | 5.  El sistema guarda la configuración y redirige al menú semanal filtrado. | |
 
 
@@ -118,9 +118,9 @@
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |--|--|
-| 1. El empleado ingresa al apartado de menú | No hay menús cargados para la semana, por eso el sistema muestra un mensaje informativo indicando que aún no hay opciones disponibles. |
+| 1. El empleado ingresa al apartado de menú |  |
 | 2. El sistema recupera los días de asistencia del empleado|
-| 3. El sistema muestra el menu con las viandas disponibles | |
+| 3. El sistema muestra el menu con las viandas disponibles | No hay menús cargados para la semana, por eso el sistema muestra un mensaje informativo indicando que aún no hay opciones disponibles. |
 | 3. El sistema muestra únicamente las opciones de menú correspondientes a esos días.  |
 | 4. Para cada día, se muestran las opciones disponibles con nombre, descripción y estado de disponibilidad  |
 | 5. Los días feriados aparecen bloqueados con un indicador visual.  |
@@ -136,10 +136,10 @@
 
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
-| 1. El usuario accede a la tabla de menu semanal | El menú seleccionado está agotado por ende el sistema muestra un mensaje de error y no registra la selección, solicitando elegir otra opción |
-| 2. El usuario visualiza las opciones de viandas disponibles segun los dias que selecciono. | En caso de no haber stock de una vianda, el sistema lo notificara |
-| 3. El usuario selecciona la vianda de los dias que asistira |  |
-| 4. El usuario realiza el pedido |  |
+| 1. El usuario accede a la tabla de menu semanal |  |
+| 2. El usuario visualiza las opciones de viandas disponibles segun los dias que selecciono. |  |
+| 3. El usuario selecciona la vianda de los dias que asistira | El menú seleccionado está agotado por ende el sistema muestra un mensaje de error y no registra la selección, solicitando elegir otra opción |
+| 4. El usuario realiza el pedido | En caso de no haber stock de una vianda, el sistema lo notificara |
 | 5. El sistema registra el pedido realizado |  |
 
 | Campo | Detalle |
@@ -152,10 +152,10 @@
 | Secuencia Normal (Camino feliz) | Excepciones / Alternativas |
 |---|---|
 | 1. El usuario accede a seccion confirmar pedidos |El empleado decide no confirmar y vuelve a editar|
-| 2. El sistema muestra un resumen completo del pedido (día, menú seleccionado por día) |  |
-| 3. El usuario verifica los datos del pedido | Error al enviar notificación, entonces el pedido se confirma igualmente y se registra el error para reintento posterior. |
+| 2. El sistema muestra un resumen completo del pedido (día, menú seleccionado por día) | En caso de no existir un pedido, el sistema lo notificara |
+| 3. El usuario verifica los datos del pedido | |
 | 4. El usuario confirma el pedido ||
-| 5. El sistema registra la confirmacion del pedido | |
+| 5. El sistema registra la confirmacion del pedido | Error al enviar notificación, entonces el pedido se confirma igualmente y se registra el error para reintento posterior. |
 
 
 | Campo | Detalle |
