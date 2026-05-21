@@ -3,3 +3,30 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+.inicio-sesion{
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 100vh;
+    background-color: #001330;
+    padding: 150px;
+    /* display: flex;*/
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grupo-campo{
+    display: flex;
+    flex-direction: column;    /* Fuerza a que el input vaya abajo del texto */
+    margin-bottom: 20px;       /* Separa un campo del siguiente */
+}
+.grupo-campo label {
+    color: #e0e0e0;            /* Gris claro/blanco para que sea perfectamente legible */
+    margin-bottom: px;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
