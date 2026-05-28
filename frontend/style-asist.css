@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #078dbc url("fondo.jpeg") center / 240px repeat;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  width: min(100%, 930px);
+  min-height: 620px;
+  margin: 12px auto;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
+.banner {
+  position: relative;
+  height: 142px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccefff url("foto_comida.png") center center / cover no-repeat;
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0 178px 0 210px;
+  color: #050505;
+  font-size: clamp(2.9rem, 6.3vw, 4.7rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateY(2px);
+}
+
+.top-actions {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 96px;
+  display: flex;
+  gap: 18px;
+  transform: translateY(-50%);
+}
+
+.icon-button {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  color: #050505;
+  cursor: pointer;
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+  background: rgba(255, 255, 255, 0.45);
+  outline: 2px solid rgba(5, 5, 5, 0.18);
+  outline-offset: 2px;
+}
+
+.icon-button svg {
+  width: 31px;
+  height: 31px;
+  stroke-width: 2.5;
+}
+
+.content {
+  position: relative;
+  min-height: 354px;
+  padding: 14px 68px 26px;
+  background: #00142e;
+}
+
+.welcome {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.9rem, 4vw, 2.1rem);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.02rem;
+  text-align: center;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 48px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.day-button {
+  width: 69px;
+  height: 69px;
+  border: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.day-button span {
+  display: inline-block;
+  transform: rotate(-48deg);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+}
+
+.day-button.red {
+  background: #ff1010;
+}
+
+.day-button.green {
+  background: #18c80d;
+}
+
+.day-button.gray {
+  background: #6f6a7d;
+}
+
+.day-button:hover,
+.day-button:focus-visible {
+  filter: brightness(1.1);
+  outline: 3px solid rgba(255, 255, 255, 0.28);
+  outline-offset: 3px;
+}
+
+.bottom-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 78px;
+}
+
+.note {
+  max-width: 420px;
+  margin: 0 0 6px 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.02rem;
+  line-height: 1.1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-right: 0;
+}
+
+.action-button {
+  min-width: 109px;
+  min-height: 38px;
+  border: 0;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancel {
+  background: #990b08;
+}
+
+.confirm {
+  background: #23670e;
+}
+
+.action-button:hover,
+.action-button:focus-visible {
+  filter: brightness(1.15);
+  outline: 2px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 2px;
+}
+
+.footer {
+  min-height: 123px;
+  padding: 33px 24px 22px;
+  background: #ffffff;
+  color: #111111;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contact svg {
+  width: 25px;
+  height: 25px;
+  fill: #000000;
+}
+
+.copyright {
+  margin: 23px 0 0;
+  font-size: 0.68rem;
+}
+
+@media (max-width: 760px) {
+  .page {
+    margin: 0 auto;
+  }
+
+  .banner {
+    height: 134px;
+  }
+
+  .brand {
+    padding: 0 88px 0 112px;
+  }
+
+  .top-actions {
+    left: 14px;
+    gap: 6px;
+  }
+
+  .content {
+    padding: 18px 18px 28px;
+  }
+
+  .days {
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 34px;
+  }
+
+  .bottom-row {
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 42px;
+  }
+
+  .note {
+    margin-left: 0;
+  }
+
+  .form-actions {
+    justify-content: flex-end;
+  }
+}
