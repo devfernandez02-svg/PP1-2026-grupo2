@@ -76,7 +76,7 @@ main {
 .logo-wrapper {
     display: flex;
     justify-content: center;
-    padding: 40px 0 30px;
+    padding: 20px 0 30px;
 }
 
 .logo {
@@ -154,7 +154,7 @@ main {
 .formulario input[type="email"],
 .formulario input[type="password"] {
     width: 100%;
-    padding: 16px 18px;
+    padding: 15px 18px;
     background-color: var(--input-bg);
     border: 1.5px solid var(--input-border);
     border-radius: 6px;
