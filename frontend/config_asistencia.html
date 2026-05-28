@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aromas Light - Configuracion de Asistencia</title>
+  <link rel="stylesheet" href="style-asist.css">
+</head>
+<body>
+  <main class="page">
+    <header class="banner">
+      <h1 class="brand">Aromas&nbsp;&nbsp;Light</h1>
+
+      <nav class="top-actions" aria-label="Accesos principales">
+        <button class="icon-button" type="button" aria-label="Menu principal" title="Menu principal">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 11.5 12 4l9 7.5" fill="currentColor"></path>
+            <path d="M5.5 10.5V21h13V10.5" fill="currentColor"></path>
+            <path d="M9.5 21v-6h5v6" fill="#ccefff"></path>
+          </svg>
+        </button>
+        <button class="icon-button" type="button" aria-label="Usuario" title="Usuario">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="7.5" r="3.5"></circle>
+            <path d="M4 21v-2.5c0-3 3.6-5 8-5s8 2 8 5V21"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <section class="content" aria-labelledby="bienvenida">
+      <h2 class="welcome" id="bienvenida">Bienvenido!</h2>
+      <p class="subtitle">Seleccione los dias de la semana que asistira a la empresa</p>
+
+      <ul class="days" aria-label="Dias de asistencia">
+        <li><button class="day-button red" type="button"><span>Domingo</span></button></li>
+        <li><button class="day-button green" type="button"><span>Lunes</span></button></li>
+        <li><button class="day-button gray" type="button"><span>Martes</span></button></li>
+        <li><button class="day-button gray" type="button"><span>Miercoles</span></button></li>
+        <li><button class="day-button gray" type="button"><span>Jueves</span></button></li>
+        <li><button class="day-button gray" type="button"><span>Viernes</span></button></li>
+        <li><button class="day-button gray" type="button"><span>Sabado</span></button></li>
+      </ul>
+
+      <div class="bottom-row">
+        <p class="note">Los dias seleccionados se utilizaran para filtrar los<br>menus disponibles</p>
+        <div class="form-actions">
+          <button class="action-button cancel" type="button">Cancelar</button>
+          <button class="action-button confirm" type="button">Confirmar</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="contact">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25v13.5A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V5.25Zm2.1.66v.22l6.9 4.55 6.9-4.55v-.22a.7.7 0 0 0-.7-.7H5.8a.7.7 0 0 0-.7.7Zm13.8 2.08-6.28 4.13a1.12 1.12 0 0 1-1.24 0L5.1 7.99v10.2c0 .39.31.7.7.7h12.4c.39 0 .7-.31.7-.7V7.99Z"></path>
+        </svg>
+        Contactanos:AromasLight@gmail.com
+      </p>
+      <p class="copyright">&copy; 2026 Aromas Light. Todos los derechos reservados.</p>
+    </footer>
+  </main>
+</body>
+</html>
