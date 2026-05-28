@@ -1,32 +1,277 @@
-body{
-   margin: 0;
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
-.inicio-sesion{
-    margin-left: 150px;
-    margin-right: 150px;
-    height: 100vh;
-    background-color: #001330;
-    padding: 150px;
-    /* display: flex;*/
-    justify-content: center;
-    align-items: center;
-
+/* ===== VARIABLES ===== */
+:root {
+    --panel-bg:      #001330;
+    --input-bg:     #042455;
+    --input-border:  #2a1a22;
+    --text-white:    #e8e8e8;
+    --text-muted:    #8a9ab0;
+    --label-color:   #d0d8e4;
+    --btn-blue:      #1a4fc4;
+    --btn-blue-h:    #1a42a8;
+    --btn-red:       #c01020;
+    --btn-red-h:     #a00d1a;
+    --btn-fb:        #1877f2;
+    --btn-fb-h:      #1464d8;
+    --btn-google-bg: #f0f0f0;
+    --btn-google-h:  #dcdcdc;
+    --accent-red:    #c0392b;
+    --font-main:     'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.grupo-campo{
+/* ===== BODY — fondo con patrón de vegetales ===== */
+body {
+    
+    font-family: var(--font-main);
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;    /* Fuerza a que el input vaya abajo del texto */
-    margin-bottom: 20px;       /* Separa un campo del siguiente */
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
 }
-.grupo-campo label {
-    color: #e0e0e0;            /* Gris claro/blanco para que sea perfectamente legible */
-    margin-bottom: px;
-    font-family: sans-serif;
+
+/* Decoración: patrón SVG de vegetales en el fondo */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("fondo.jpeg");
+    background-size: 500px 500px;
+    filter: brightness(0.3);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ===== PANEL CENTRAL ===== */
+.panel {
+    background-color: var(--panel-bg);
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    padding: 0 60px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* ===== LOGO ===== */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 30px;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    background: transparent;
+}
+
+.logo-placeholder {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-red);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ===== FORMULARIO ===== */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+
+/* ===== GRUPOS DE CAMPO ===== */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+/* recuperar contraseña */
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+/* ===== LABELS ===== */
+.grupo-campo label,
+.label-row label {
+    color: var(--label-color);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
+}
+
+/* ===== LINK RECUPERAR ===== */
+.recuperar {
+    color: var(--text-muted);
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.recuperar:hover {
+    color: var(--text-white);
+}
+
+/* ===== INPUTS ===== */
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    width: 100%;
+    padding: 16px 18px;
+    background-color: var(--input-bg);
+    border: 1.5px solid var(--input-border);
+    border-radius: 6px;
+    color: var(--text-muted);
     font-size: 15px;
-    padding: 10px;
+    font-family: var(--font-main);
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
+.formulario input::placeholder {
+    color: #5a6a7a;
+}
 
+.formulario input:focus {
+    border-color: #3a5a8a;
+    background-color: #200d14;
+}
+
+/* ===== BOTÓN INICIAR SESIÓN ===== */
+.btn-iniciar {
+    width: 100%;
+    padding: 18px;
+    background-color: var(--btn-blue);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font-main);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-iniciar:hover  { background-color: var(--btn-blue-h); }
+.btn-iniciar:active { transform: scale(0.98); }
+
+/* ===== BOTÓN REGISTRARSE ===== */
+.btn-registrar {
+    width: 100%;
+    padding: 18px;
+    background-color: var(--btn-red);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font-main);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-registrar:hover  { background-color: var(--btn-red-h); }
+.btn-registrar:active { transform: scale(0.98); }
+
+/* ===== FILA BOTONES SOCIALES ===== */
+.social-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* ===== BOTONES SOCIALES ===== */
+.btn-social {
+    width: 140px;
+    height: 64px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-social:active { transform: scale(0.97); }
+
+.btn-facebook {
+    background-color: var(--btn-fb);
+}
+
+.btn-facebook:hover {
+    background-color: var(--btn-fb-h);
+}
+
+.btn-google {
+    background-color: var(--btn-google-bg);
+}
+
+.btn-google:hover {
+    background-color: var(--btn-google-h);
+}
+
+/* ===== RESPONSIVIDAD ===== */
+@media (max-width: 640px) {
+    .panel {
+        padding: 0 28px 48px;
+        max-width: 100%;
+    }
+
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .btn-iniciar,
+    .btn-registrar {
+        font-size: 17px;
+        padding: 15px;
+    }
+
+    .btn-social {
+        width: 120px;
+        height: 56px;
+    }
+}
