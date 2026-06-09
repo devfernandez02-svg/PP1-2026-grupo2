@@ -6,8 +6,8 @@
 ## 1. Inventario de pantallas troncales
 | N° | Nombre | Actor principal | CU(s) cubierto(s) | Función (1 frase) |
 |----|--------|------------------|---------------------|--------------------|
-| 01 | Login | | | |
-| 02 | | | | |
+| 01 | Login | Administrador y empelado | |Acceder al sistema |
+| 02 |Registrar asistencia | empleado | | |
 | 03 | | | | |
 | 04 | | | | |
 | 05 | | | | |
@@ -16,7 +16,7 @@
 | Pantalla | CU(s) | HU(s) | Actor |
 |----------|-------|-------|-------|
 | 01 — Login | | | |
-| 02 — [Nombre] | | | |
+| 02 — Registrar asistenica | | HU-06 | |
 | 03 — [Nombre] | | | |
 | 04 — [Nombre] | | | |
 | 05 — [Nombre] | | | |

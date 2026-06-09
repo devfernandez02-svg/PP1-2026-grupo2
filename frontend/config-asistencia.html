@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aromas Light</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cinzel:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="config-asist-style.css"/>
+</head>
+<body>
+
+
+<header>
+
+ 
+
+  <div class="header-icons">
+  <!-- Botón Home — cambiá href="#" por la URL de tu página de inicio -->
+  <a href="#" class="icon-btn" title="Inicio">
+    <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+  </a>
+
+  <!-- Botón Usuario — cambiá href="#" por la URL de tu perfil o login -->
+  <a href="#" class="icon-btn" title="Usuario">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+  </a>
+</div>
+
+  <div class="header-title">AROMAS LIGHT</div>
+
+  <span class="header-arrow">&#8250;</span>
+
+ 
+
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+  <h1 class="welcome">BIENVENIDO!</h1>
+  <p class="subtitle">Seleccione los dias de la semana que asistira a la empresa</p>
+
+  
+  <div class="days-grid">
+
+    <!-- DOMINGO — inicia rojo, al marcar pasa a verde -->
+    <input type="checkbox" id="domingo" class="day-input" />
+    <label for="domingo" class="day-label starts-red"><span>Domingo</span></label>
+
+    <!-- LUNES — inicia verde (pre-marcado) -->
+    <input type="checkbox" id="lunes" class="day-input" checked />
+    <label for="lunes" class="day-label"><span>Lunes</span></label>
+
+    <!-- MARTES -->
+    <input type="checkbox" id="martes" class="day-input" />
+    <label for="martes" class="day-label"><span>Martes</span></label>
+
+    <!-- MIÉRCOLES -->
+    <input type="checkbox" id="miercoles" class="day-input" />
+    <label for="miercoles" class="day-label"><span>Miércoles</span></label>
+
+    <!-- JUEVES -->
+    <input type="checkbox" id="jueves" class="day-input" />
+    <label for="jueves" class="day-label"><span>Jueves</span></label>
+
+    <!-- VIERNES -->
+    <input type="checkbox" id="viernes" class="day-input" />
+    <label for="viernes" class="day-label"><span>Viernes</span></label>
+
+    <!-- SÁBADO -->
+    <input type="checkbox" id="sabado" class="day-input" />
+    <label for="sabado" class="day-label"><span>Sábado</span></label>
+
+  </div>
+
+  <div class="bottom-row">
+    <p class="info-text">Los dias seleccionados se utilizaran para filtrar los menus disponibles</p>
+    <div class="btn-group">
+      <!-- Cancelar: recarga la página para resetear los checkboxes -->
+      <a href="" class="btn btn-cancel">Cancelar</a>
+      <!-- Confirmar: enlazá a tu página siguiente o acción -->
+      <a href="#" class="btn btn-confirm">Confirmar</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-email">
+    <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+    Contactanos:AromasLight@gmail.com
+  </div>
+  <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
