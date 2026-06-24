@@ -1,0 +1,209 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#071b55;
+color:white;
+}
+
+.navbar{
+position:relative;
+width:100%;
+height:110px;
+overflow:hidden;
+}
+
+.banner{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:0;
+}
+
+.navbar nav{
+position:relative;
+z-index:1;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.header-icons{
+position:absolute;
+left:40px;
+top:50%;
+transform:translateY(-50%);
+z-index:2;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background .2s ease, transform .15s ease;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+.icon-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.navbar h1{
+font-size:50px;
+letter-spacing:4px;
+color:black;
+
+}
+
+.contenedor{
+max-width:1000px;
+margin:auto;
+padding:35px;
+}
+.encabezado-pantalla{
+text-align:center;
+margin-bottom:35px;
+
+}
+.encabezado-pantalla h1{
+font-size:42px;
+margin-bottom:10px;
+
+}
+.encabezado-pantalla p{
+font-size:20px;
+
+}
+.controles-consolidado{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+margin-bottom:35px;
+
+}
+
+.campo-fecha{
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+.campo-fecha label{
+font-weight:bold;
+font-size:18px;
+
+}
+.botones{
+display:flex;
+gap:15px;
+
+}
+.botones button{
+padding:12px 22px;
+border:none;
+border-radius:7px;
+font-weight:bold;
+cursor:pointer;
+color:white;
+
+}
+.btn-generar{
+background:#2e962e;
+
+}
+.btn-descargar{
+background:#6b7280;
+
+}
+.btn-enviar{
+background:#c91c1c;
+
+}
+.botones button:hover{
+opacity:0.9;
+
+}
+.tabla-consolidado h2{
+font-size:32px;
+margin-bottom:18px;
+
+}
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+color:black;
+
+}
+th{
+background:#d9d9d9;
+padding:15px;
+
+}
+td{
+padding:15px;
+border:1px solid #cccccc;
+
+}
+.totales{
+background:white;
+color:black;
+padding:28px;
+margin-top:30px;
+border-radius:12px;
+
+}
+.totales h3{
+font-size:28px;
+margin-bottom:15px;
+
+}
+.totales ul{
+margin-left:25px;
+margin-bottom:15px;
+
+}
+.totales li{
+margin-bottom:8px;
+
+}
+footer{
+margin-top:50px;
+padding:25px;
+background:#ececec;
+color:black;
+text-align:center;
+
+}
+footer p{
+margin:5px 0;
+
+}
