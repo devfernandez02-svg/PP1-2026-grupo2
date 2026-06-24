@@ -52,7 +52,7 @@ body {
 
 header {
   background: #a8d8ea;
- background-image: url('foto_comida.png');
+ background-image: url('/frontend/media/foto_comida.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -234,9 +234,10 @@ main {
 /* ── FOOTER ── */
 footer {
   background: var(--footer-bg);
+    background: #1C1C1C;
   padding: 28px 16px 18px;
   text-align: center;
-  color: #333;
+  color: #D4A843;
 }
 .footer-email {
   display: flex;
@@ -248,7 +249,7 @@ footer {
 }
 .footer-email svg {
   width: 22px; height: 22px;
-  fill: none; stroke: #333;
+  fill: none; stroke: #D4A843;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;

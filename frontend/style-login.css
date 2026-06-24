@@ -42,7 +42,7 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url("fondo.jpeg");
+    background-image: url("/frontend/media/fondo.jpeg");
     background-size: 500px 500px;
     filter: brightness(0.3);
     pointer-events: none;
