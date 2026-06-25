@@ -37,7 +37,7 @@ main {
       rgba(20, 20, 20, 0.55) 0%,
       rgba(192, 24, 42, 0.45) 
     ),
-    url('/PP1-2026-grupo2/frontend/media/foto_comida.png')
+    url('/frontend/media/foto_comida.png')
       center / cover no-repeat;
   min-height: 240px;
   display: flex;

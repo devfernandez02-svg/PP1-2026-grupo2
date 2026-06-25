@@ -8,17 +8,17 @@
 |----|--------|------------------|---------------------|--------------------|
 | 01 | Login | Administrador y empelado | |Acceder al sistema |
 | 02 |Registrar asistencia | empleado | Configurar Asistencia | Permite seleccionar los días de asistencia presencial a la empresa. |
-| 03 | Menú + Registrar pedido| Empleado | Consultar menú/Realizar-Modificar pedido | Permite visualizar el menú semanal filtrado y registrar un pedido. |
-| 04 | | | | |
+| 03 | Menú  | Empleado | Consultar menú | Permite visualizar el menú semanal filtrado y  registrar un pedido. |
+| 04 |Registrar pedido | Empleado | Realizar-Modificar pedido |Permite modificar, cancelar o confirmar el pedido  |
 | 05 | Generar consolidado diario | Administrador | Visualizar pedido | Permite visualizar el conteo de pedidos diarios y generar la lista para la cocina. |
 ---
 ## 2. Trazabilidad pantalla ↔ E1
 | Pantalla | CU(s) | HU(s) | Actor |
 |----------|-------|-------|-------|
-| 01 — Login | | | |
+| 01 — Login | |  | |
 | 02 — Registrar asistenica | Configurar asistencia | HU-06 | Empleado |
 | 03 — Menu + Registrar pedido| Consultar menu-Realizar-Modificar pedido | HU-01, HU-04, HU-05, HU-07 | Empleado |
-| 04 — [Nombre] | | | |
+| 04 — Resumen pedido | Confirmar pedido  | HU-02 | Empleado |
 | 05 — Generar consolidado diario| Visualizar pedido | HU-14 | Administrador |
 ---
 ## 3. Decisiones técnicas y observaciones
@@ -33,8 +33,8 @@ pantalla.
 - Se diseñó una pantalla de menú semanal organizada por días, utilizando tarjetas para cada opción de vianda. Cada tarjeta contiene el nombre del plato, una imagen, una descripción y un botón para agregarlo al pedido.
 Esta pantalla cubre los casos de uso Consultar menú y Realizar/Modificar pedido, ya que el empleado necesita visualizar previamente las opciones disponibles antes de seleccionar una vianda.
 El botón principal utiliza el texto Guardar pedido, ya que según el modelo del sistema el pedido queda registrado en estado borrador y la confirmación se realiza posteriormente mediante el caso de uso Confirmar pedido.
-### Pantalla 04 — [Nombre]
-- (Pendiente)
+### Pantalla 04 — [Resumen Pedido]
+- Esta pantalla le permite al empleado, poder modificar el pedido, seleccionado en la pantalla anterior, al tocar opcion modificar muestra los platos del dia que quizo modificar, a su vez permite modificar los platos seleccionados de todos los dias, si tocas la opcion cancelar, y en caso de confirmar se envia notificiacion que se refleja en el consolidado diario, tambien pueden los empleados aclarar  cualquier cosasobre el plato en la seccion de comentario lo cual queda registrado en el consolidado diario.
 ### Pantalla 05 — [Generar consolidado diario]
 - Esta pantalla pertenece al rol Administrador, diferenciándose de las pantallas anteriores que son utilizadas principalmente por el Empleado.
 Se optó por una interfaz de tipo reporte, incorporando un selector de fecha, una tabla con pedidos confirmados, un resumen por opción de menú y botones de acción como Generar, Descargar y Enviar al proveedor.
