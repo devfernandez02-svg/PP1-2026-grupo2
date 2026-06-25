@@ -1,0 +1,330 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  width: 100%;
+}
+/* hacemos que el bodi sea un flex vertical */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+/* hacemos que el main complete el espacio que falta para que el footer quede siempre abajo*/
+main {
+    flex: 1;
+}
+
+.header-bg {
+  position: relative;
+  background:
+    linear-gradient(
+     135deg,
+     rgba(192, 24, 42, 0.72) 0%,
+      rgba(20, 20, 20, 0.55) 0%,
+      rgba(192, 24, 42, 0.45) 
+    ),
+    url('/PP1-2026-grupo2/frontend/media/foto_comida.png')
+      center / cover no-repeat;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Dia h3{
+  text-align: center;
+
+}
+
+.header-content {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+}
+
+.header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #000;
+
+  line-height: 1;
+  margin-bottom: 1.4rem;
+}
+
+#intro{
+  margin-top: 50px;
+  text-align: center;  
+}
+
+.Dia{
+    margin-top: 50px;
+}
+.pedido{                
+    background-color: red;
+    border-radius: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    text-align: center;
+    padding: 20px;
+}
+  
+.pedido img{
+   width: 30vh;
+   aspect-ratio: 4 / 3;
+   overflow: hidden;
+   margin-top: 20px;
+}
+.pedido p{
+  margin-top: 20px;
+}
+.pedido button{
+  margin-top: 20px;
+}
+.mod{
+    background-color: yellow;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 5px 15px;
+    border: none;
+}  
+.mod:hover{
+    background-color:#d4a800;
+    cursor: pointer;
+}
+
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size:24px;  
+    align-items: center;  
+    flex-wrap: wrap; 
+    gap: 50px;
+}
+
+.seccion-inferior {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0 20px 30px 20px;
+    font-family: sans-serif;
+    margin-top: 50px;
+    
+}
+
+.caja-comentarios {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caja-comentarios textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    min-height: 80px;
+}
+
+.fila-enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fila-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    
+}
+
+.btn-verde {
+    background-color: #00cc00;
+    color: #004400;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-rojo {
+    background-color: #ff2222;
+    color: #5a0000;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-verde:hover { background-color: #00aa00; }
+.btn-rojo:hover  { background-color: #dd0000; }
+
+.site-footer {
+  background: #1C1C1C;
+  padding: 2rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.footer-contact svg {
+  width: 17px;
+  height: 17px;
+  color: #D4A843;
+  flex-shrink: 0;
+}
+/*Estilos del footer */
+.footer-contact a {
+  color: #D4A843;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+/*Cuando pases el cursor se hace mas clarita*/
+.footer-contact a:hover {
+  color: #f0c85c;
+}
+/*Estilos de los legales*/
+.footer-copy {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.03em;
+}
+/*responsive*/
+/* Tablet: 768px y menos */
+@media (max-width: 768px) {
+ 
+  .header-content {
+    padding: 2.2rem 1.2rem 2rem;
+  }
+ 
+  #intro {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    margin-top: 35px;
+  }
+ 
+  .contenedor {
+    gap: 30px;
+    padding: 0 1rem;
+  }
+ 
+  .seccion-inferior {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+  }
+ 
+  .caja-comentarios {
+    width: 100%;
+    max-width: 420px;
+  }
+ 
+  .fila-botones {
+    width: 100%;
+    max-width: 420px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+ 
+  .fila-botones button {
+    flex: 1;
+  }
+}
+ 
+/* Mobile: 480px y menos */
+@media (max-width: 480px) {
+ 
+  .header-content {
+    padding: 1.8rem 1rem 1.6rem;
+  }
+ 
+  #intro {
+    font-size: 1.1rem;
+    margin-top: 25px;
+  }
+ 
+  .Dia {
+    margin-top: 30px;
+    width: 100%;
+  }
+ 
+  .contenedor {
+    gap: 20px;
+    padding: 0 0.8rem;
+  }
+ 
+  .pedido {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+ 
+  .pedido h4 {
+    font-size: 1.1rem;
+  }
+ 
+  .seccion-inferior {
+    padding: 0 0.8rem 20px 0.8rem;
+  }
+ 
+  .caja-comentarios {
+    padding: 12px;
+  }
+ 
+  .fila-botones {
+    flex-direction: column;
+    gap: 12px;
+  }
+ 
+  .footer-contact {
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+  }
+}
