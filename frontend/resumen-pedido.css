@@ -8,11 +8,17 @@
   width: 100%;
 }
 /* hacemos que el bodi sea un flex vertical */
+html {
+    overflow-x: hidden;
+}
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 
@@ -80,8 +86,10 @@ main {
 }
   
 .pedido img{
-   width: 30vh;
+   width: 100%;
+   max-width: 280px;
    aspect-ratio: 4 / 3;
+   object-fit: cover;
    overflow: hidden;
    margin-top: 20px;
 }
