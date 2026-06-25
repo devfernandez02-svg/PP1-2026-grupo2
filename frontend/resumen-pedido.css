@@ -83,8 +83,13 @@ main {
     align-items: center;      
     text-align: center;
     padding: 20px;
+    width:  400px;
+    height: 600px;
+    position: relative;
 }
-  
+
+
+
 .pedido img{
    width: 100%;
    max-width: 280px;
@@ -95,9 +100,10 @@ main {
 }
 .pedido p{
   margin-top: 20px;
-}
+}  
 .pedido button{
-  margin-top: 20px;
+  position: absolute;
+  top: 87%;
 }
 .mod{
     background-color: yellow;
