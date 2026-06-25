@@ -195,15 +195,15 @@ margin-bottom:15px;
 margin-bottom:8px;
 
 }
+
 footer{
 margin-top:50px;
 padding:25px;
-background:#ececec;
-color:black;
+ background: #1C1C1C;
+color:#D4A843 ;
 text-align:center;
 
 }
 footer p{
 margin:5px 0;
-
 }
