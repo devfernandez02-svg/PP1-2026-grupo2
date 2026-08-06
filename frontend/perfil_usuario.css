@@ -1,0 +1,332 @@
+:root{
+  --azul-header: #bfe3f2;
+  --gris-fondo: #b9b9b9;
+  --gris-oscuro-input: #d4d4d4;
+  --naranja: #f2913d;
+  --negro-footer: #1a1a1a;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  margin:0;
+}
+
+/* Estructura general: el body se vuelve un flex-container en columna
+   para que el footer quede siempre pegado abajo, sin importar
+   cuánto contenido tenga la página */
+body{
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--gris-fondo);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* El contenido principal crece y empuja el footer hacia abajo */
+main.perfil-container{
+  flex: 1 0 auto;
+}
+
+/* ===== HEADER ===== */
+.perfil-header{
+  position: relative;
+  height: 130px;
+  flex-shrink: 0;
+
+  /* Colocá aquí la imagen de fondo que quieras usar para el header */
+  background-color: var(--azul-header);
+  background-image:  url('/frontend/media/foto_comida.png'); 
+  background-size: cover;
+  background-position: center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.perfil-header h1{
+  font-family: 'Georgia', serif;
+  letter-spacing: 6px;
+  font-size: 2.3rem;
+  margin:0;
+  color:#111;
+  text-align: center;
+}
+
+/* ===== CUERPO / DATOS PERFIL ===== */
+.perfil-container{
+  max-width: 650px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px 40px 20px;
+}
+
+.perfil-avatar-wrapper{
+  display:flex;
+  align-items:center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Espacio vacío para que coloques la foto de perfil que quieras.
+   Simplemente agregá una imagen dentro de este div (o usalo como
+   background-image) sin que se rompa el diseño. */
+.perfil-avatar-placeholder{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px dashed #888;
+  background-color: #cfcfcf;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+.perfil-avatar-placeholder img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.perfil-avatar-placeholder span{
+  font-size: 0.65rem;
+  color:#555;
+  text-align:center;
+  padding: 0 8px;
+}
+
+/* Campo de nombre, estilizado como texto pero editable igual que el resto */
+.perfil-nombre-input{
+  font-size: 1.4rem;
+  font-weight: 500;
+  color:#111;
+  border: none;
+  background: transparent;
+  flex:1;
+  min-width: 0;
+}
+
+/* ===== TOGGLE DE EDICIÓN (solo CSS, sin JavaScript) ===== */
+/* Checkbox oculto que controla el modo edición mediante el selector ~ */
+#modoEdicion{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-editar{
+  background: transparent;
+  border: none;
+  color:#333;
+  font-size: 1.1rem;
+  cursor:pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn-editar:hover{
+  color: var(--naranja);
+  transform: scale(1.1);
+}
+
+/* Cuando el checkbox está marcado, el ícono lápiz cambia de color */
+#modoEdicion:checked ~ .perfil-avatar-wrapper .btn-editar{
+  color: var(--naranja);
+}
+
+.campo-label{
+  font-size: 0.85rem;
+  font-weight: 600;
+  color:#222;
+  margin-bottom: 4px;
+  display:block;
+}
+
+.campo-input{
+  width:100%;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: var(--gris-oscuro-input);
+  color:#555;
+  margin-bottom: 20px;
+  pointer-events: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+textarea.campo-input{
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Mientras el checkbox esté marcado, todos los campos se aclaran
+   y quedan habilitados para escribir (efecto "modo edición") */
+#modoEdicion:checked ~ form .campo-input,
+#modoEdicion:checked ~ .perfil-avatar-wrapper .perfil-nombre-input{
+  background-color: #fdfdfd;
+  color:#000;
+  box-shadow: 0 0 0 2px var(--naranja) inset;
+  pointer-events: auto;
+}
+
+#modoEdicion:checked ~ .perfil-avatar-wrapper .perfil-nombre-input{
+  box-shadow: 0 0 0 2px var(--naranja) inset;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.campo-input:focus{
+  outline:none;
+}
+
+/* Botones de acción, solo visibles en modo edición */
+.acciones-guardar{
+  display:none;
+  justify-content:flex-end;
+  gap:10px;
+  margin-top: 10px;
+}
+
+#modoEdicion:checked ~ form .acciones-guardar{
+  display:flex;
+}
+
+.btn-guardar{
+  background-color: var(--naranja);
+  color:#fff;
+  border:none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight:500;
+}
+
+.btn-cancelar-label{
+  background-color: #6c757d;
+  color:#fff;
+  border:none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight:500;
+  cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  flex-shrink: 0;
+  background-color: var(--negro-footer);
+  color:#eee;
+  text-align:center;
+  padding: 20px 10px;
+}
+footer a{
+  color: var(--naranja);
+  text-decoration: none;
+  font-weight: 500;
+}
+footer p{
+  margin: 8px 0 0 0;
+  font-size: 0.8rem;
+  color:#bbb;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablets */
+@media (max-width: 768px){
+  .perfil-header h1{
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+  }
+
+  .perfil-container{
+    margin: 30px auto;
+    padding: 0 16px 30px 16px;
+  }
+
+  .perfil-avatar-placeholder{
+    width: 75px;
+    height: 75px;
+  }
+
+  .perfil-nombre-input{
+    font-size: 1.2rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px){
+  .perfil-header{
+    height: 100px;
+  }
+
+  .perfil-header h1{
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  .perfil-container{
+    margin: 20px auto;
+    padding: 0 12px 24px 12px;
+  }
+
+  /* El bloque de avatar + nombre + lápiz pasa a apilarse en vertical */
+  .perfil-avatar-wrapper{
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .perfil-avatar-placeholder{
+    width: 70px;
+    height: 70px;
+  }
+
+  .perfil-nombre-input{
+    flex: 1 1 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .btn-editar{
+    order: 3;
+  }
+
+  .campo-label{
+    font-size: 0.8rem;
+  }
+
+  .campo-input{
+    padding: 10px 12px;
+    margin-bottom: 16px;
+  }
+
+  /* Botones de guardar/cancelar ocupan todo el ancho y se apilan */
+  .acciones-guardar{
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .btn-guardar,
+  .btn-cancelar-label{
+    width: 100%;
+    text-align: center;
+    padding: 10px 18px;
+  }
+
+  footer{
+    padding: 16px 10px;
+  }
+
+  footer p{
+    font-size: 0.72rem;
+  }
+}

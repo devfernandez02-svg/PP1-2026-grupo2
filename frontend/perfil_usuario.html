@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aromas Light - Perfil de Usuario</title>
+
+<!-- Bootstrap 5 (solo utilidades de grid/estilos, sin JS de Bootstrap) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Estilos propios de la pantalla de perfil -->
+<link rel="stylesheet" href="perfil_usuario.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+
+<header class="perfil-header">
+  <h1>AROMAS&nbsp;&nbsp;LIGHT</h1>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<main class="perfil-container">
+
+
+  <input type="checkbox" id="modoEdicion">
+
+  <div class="perfil-avatar-wrapper">
+    <!-- Apartado vacío para colocar la foto de perfil que quieras. -->
+    <div class="perfil-avatar-placeholder">
+      <span>Foto de perfil</span>
+    </div>
+
+    <input type="text" class="perfil-nombre-input" value="Carlos Perez" tabindex="-1">
+
+    <label for="modoEdicion" class="btn-editar" title="Editar perfil">
+      <i class="fa-solid fa-pen"></i>
+    </label>
+  </div>
+
+  <form id="formPerfil">
+    <div class="row">
+      <div class="col-md-6">
+        <label class="campo-label" for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="text" id="fechaNacimiento" class="campo-input" value="06/04/1996" tabindex="-1">
+      </div>
+      <div class="col-md-6">
+        <label class="campo-label" for="email">Email:</label>
+        <input type="email" id="email" class="campo-input" value="Carlosperez@gmail.com" tabindex="-1">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="campo-label" for="dni">DNI</label>
+        <input type="text" id="dni" class="campo-input" value="11200300" tabindex="-1">
+      </div>
+      <div class="col-md-6">
+        <label class="campo-label" for="telefono">N° Telefonico</label>
+        <input type="text" id="telefono" class="campo-input" value="3422222222" tabindex="-1">
+      </div>
+    </div>
+
+    <label class="campo-label" for="comentarios">Comentarios:</label>
+    <textarea id="comentarios" class="campo-input" tabindex="-1">Alergias y/o preferencias sobre alimentos</textarea>
+
+    <div class="acciones-guardar">
+      <!-- Este label apunta al mismo checkbox: al hacer clic, cierra el modo edición -->
+      <label for="modoEdicion" class="btn-cancelar-label">Cancelar</label>
+      <button type="submit" class="btn-guardar">Guardar cambios</button>
+    </div>
+  </form>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div>
+    <i class="fa-solid fa-envelope"></i>
+    <a href="mailto:AromasLight@gmail.com">AromasLight@gmail.com</a>
+  </div>
+  <p>&copy; 2026 Aromas Light. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

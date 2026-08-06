@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aromas Light – Administrar Menú</title>
+  <link rel="stylesheet" href="admin-menu.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+  <header class="site-header">
+    <div class="header-bg">
+      <div class="header-content">
+        <h1 class="header-title">AROMAS LIGHT</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════ MENÚ (ADMIN) ═══════════════════════ -->
+  <main id="menu" class="menu-main">
+
+    <!-- ─── SECCIÓN DE DÍA 1 ─── -->
+    <section class="day-section">
+      <div class="day-header">
+
+        <!-- Selector de día (sin JS: details + radios + :has()) -->
+        <details class="day-select">
+          <summary class="day-select-summary">
+            <span class="day-select-text">
+              <span class="day-placeholder">Seleccionar día</span>
+              <span class="day-chosen" data-day="lunes">Lunes</span>
+              <span class="day-chosen" data-day="martes">Martes</span>
+              <span class="day-chosen" data-day="miercoles">Miércoles</span>
+              <span class="day-chosen" data-day="jueves">Jueves</span>
+              <span class="day-chosen" data-day="viernes">Viernes</span>
+              <span class="day-chosen" data-day="sabado">Sábado</span>
+              <span class="day-chosen" data-day="domingo">Domingo</span>
+            </span>
+            <svg class="day-select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <ul class="day-options">
+            <li><input type="radio" name="dia-1" value="lunes" id="d1-lunes" class="day-radio" checked><label for="d1-lunes">Lunes</label></li>
+            <li><input type="radio" name="dia-1" value="martes" id="d1-martes" class="day-radio"><label for="d1-martes">Martes</label></li>
+            <li><input type="radio" name="dia-1" value="miercoles" id="d1-miercoles" class="day-radio"><label for="d1-miercoles">Miércoles</label></li>
+            <li><input type="radio" name="dia-1" value="jueves" id="d1-jueves" class="day-radio"><label for="d1-jueves">Jueves</label></li>
+            <li><input type="radio" name="dia-1" value="viernes" id="d1-viernes" class="day-radio"><label for="d1-viernes">Viernes</label></li>
+            <li><input type="radio" name="dia-1" value="sabado" id="d1-sabado" class="day-radio"><label for="d1-sabado">Sábado</label></li>
+            <li><input type="radio" name="dia-1" value="domingo" id="d1-domingo" class="day-radio"><label for="d1-domingo">Domingo</label></li>
+          </ul>
+        </details>
+
+        <button type="button" class="btn-cancel">Borrar día</button>
+      </div>
+
+      <div class="day-body">
+        <div class="cards-grid">
+          <!-- ─── PLATO ─── -->
+          <article class="dish-card">
+            <h3 class="card-title">Guiso</h3>
+            <div class="card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?w=400&q=80"
+                alt="Guizo de arroz con carne"
+                class="card-img"
+              />
+            </div>
+            <p class="card-desc">
+              Guizo de arroz con carne molida, salsa roja, cebolla, morron y ajo.
+            </p>
+            <button type="button" class="icon-circle-btn card-btn-remove" aria-label="Quitar plato">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </article>
+          <!-- ─── PLATO ─── -->
+          <article class="dish-card">
+            <h3 class="card-title">Suprema</h3>
+            <div class="card-img-wrap">
+              <img
+                src="/frontend/media/suprema.webp"
+                alt="Suprema"
+                class="card-img"
+              />
+            </div>
+            <p class="card-desc">
+              Suprema de pollo al horno acompañada de puré de papas clásico y suave.
+            </p>
+            <button type="button" class="icon-circle-btn card-btn-remove" aria-label="Quitar plato">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </article>
+          <!-- ─── PLATO ─── -->
+          <article class="dish-card">
+            <h3 class="card-title">Tallarines</h3>
+            <div class="card-img-wrap">
+              <img
+                src="/frontend/media/tallarines.jpg"
+                alt="Tallarines"
+                class="card-img"
+              />
+            </div>
+            <p class="card-desc">
+              Pasta larga clásica, suave y en su punto justo de cocción. Acompañados con la salsa que más te guste y queso rallado.
+            </p>
+            <button type="button" class="icon-circle-btn card-btn-remove" aria-label="Quitar plato">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </article>
+        </div>
+
+        <button type="button" class="icon-circle-btn btn-add-dish" aria-label="Agregar plato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ─── SECCIÓN DE DÍA 2 ─── -->
+    <section class="day-section">
+      <div class="day-header">
+
+        <details class="day-select">
+          <summary class="day-select-summary">
+            <span class="day-select-text">
+              <span class="day-placeholder">Seleccionar día</span>
+              <span class="day-chosen" data-day="lunes">Lunes</span>
+              <span class="day-chosen" data-day="martes">Martes</span>
+              <span class="day-chosen" data-day="miercoles">Miércoles</span>
+              <span class="day-chosen" data-day="jueves">Jueves</span>
+              <span class="day-chosen" data-day="viernes">Viernes</span>
+              <span class="day-chosen" data-day="sabado">Sábado</span>
+              <span class="day-chosen" data-day="domingo">Domingo</span>
+            </span>
+            <svg class="day-select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <ul class="day-options">
+            <li><input type="radio" name="dia-2" value="lunes" id="d2-lunes" class="day-radio"><label for="d2-lunes">Lunes</label></li>
+            <li><input type="radio" name="dia-2" value="martes" id="d2-martes" class="day-radio"><label for="d2-martes">Martes</label></li>
+            <li><input type="radio" name="dia-2" value="miercoles" id="d2-miercoles" class="day-radio" checked><label for="d2-miercoles">Miércoles</label></li>
+            <li><input type="radio" name="dia-2" value="jueves" id="d2-jueves" class="day-radio"><label for="d2-jueves">Jueves</label></li>
+            <li><input type="radio" name="dia-2" value="viernes" id="d2-viernes" class="day-radio"><label for="d2-viernes">Viernes</label></li>
+            <li><input type="radio" name="dia-2" value="sabado" id="d2-sabado" class="day-radio"><label for="d2-sabado">Sábado</label></li>
+            <li><input type="radio" name="dia-2" value="domingo" id="d2-domingo" class="day-radio"><label for="d2-domingo">Domingo</label></li>
+          </ul>
+        </details>
+
+        <button type="button" class="btn-cancel">Borrar día</button>
+      </div>
+
+      <div class="day-body">
+        <div class="cards-grid">
+          <!-- ─── PLATO ─── -->
+          <article class="dish-card">
+            <h3 class="card-title">Pastel de Papa</h3>
+            <div class="card-img-wrap">
+              <img
+                src="/frontend/media/pastelpapa.jpg"
+                alt="Pastel de papa"
+                class="card-img"
+              />
+            </div>
+            <p class="card-desc">
+              Una base sabrosa de carne vacuna picada, perfectamente sazonada con cebolla, morrón y especias seleccionadas, cubierta por una capa suave y cremosa de puré de papas gratinado al horno
+            </p>
+            <button type="button" class="icon-circle-btn card-btn-remove" aria-label="Quitar plato">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </article>
+          <!-- ─── PLATO ─── -->
+          <article class="dish-card">
+            <h3 class="card-title">Tarta de Jamon y Queso</h3>
+            <div class="card-img-wrap">
+              <img
+                src="/frontend/media/tarta.jfif"
+                alt="Tarta de jamo y queso"
+                class="card-img"
+              />
+            </div>
+            <p class="card-desc">
+              Masa casera bien crocante, rellena con abundante jamón cocido y una mezcla de quesos derretidos súper sabrosa. Dorada al horno y lista para disfrutar en cualquier momento del día.
+            </p>
+            <button type="button" class="icon-circle-btn card-btn-remove" aria-label="Quitar plato">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </article>
+          <!-- ─── PLATO ─── -->
+          <article class="dish-card">
+            <h3 class="card-title">PIZZA</h3>
+            <div class="card-img-wrap">
+              <img
+                src="/frontend/media/n9YGrfD3a_2000x1500__1.jpg"
+                alt="Pizza"
+                class="card-img"
+              />
+            </div>
+            <p class="card-desc">
+              Masa casera bien dorada, salsa de tomates seleccionados y una capa irresistible de muzzarella bien derretida.
+            </p>
+            <button type="button" class="icon-circle-btn card-btn-remove" aria-label="Quitar plato">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </article>
+        </div>
+
+        <button type="button" class="icon-circle-btn btn-add-dish" aria-label="Agregar plato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ─── ACCIONES DE ADMINISTRADOR ─── -->
+    <div class="actions-bar">
+      <button type="button" class="btn-confirm">Añadir día</button>
+      <button type="button" class="btn-confirm">Publicar menús</button>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="AromasLight@gmail.com">AromasLight@gmail.com</a>
+      </div>
+      <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
