@@ -1,0 +1,233 @@
+:root {
+  --color-header: #c7e6fa;
+  --color-naranja: #f4630c;
+  --color-naranja-hover: #d9590c;
+  --color-texto: #1a1a1a;
+  --color-borde: #d9d9d9;
+  --color-placeholder: #a3a3a3;
+  --color-footer: #101010;
+  --color-footer-texto: #c9c9c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--color-texto);
+}
+
+/* header */
+
+.header {
+  position: relative;
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--color-header);
+  background-image: url("assets/header-food.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  word-spacing: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* formulario */
+
+main {
+  background-color: #fff;
+  padding: 70px 24px;
+}
+
+.form-container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 68px;
+  row-gap: 34px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 20px;
+  border: 1.5px solid var(--color-borde);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.form-group input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.form-group input:focus {
+  border-color: var(--color-naranja);
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon input {
+  padding-right: 48px;
+}
+
+.input-icon .icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  color: #555;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 42px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: var(--color-naranja);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary .icon {
+  width: 19px;
+  height: 19px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-naranja-hover);
+}
+
+.login-text {
+  font-size: 15px;
+}
+
+.login-link {
+  color: var(--color-naranja);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--color-footer);
+  padding: 36px 20px;
+  text-align: center;
+}
+
+.footer-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-naranja);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-email .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.footer-copy {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--color-footer-texto);
+}
+
+/* responsive */
+
+@media (max-width: 700px) {
+  .header {
+    min-height: 170px;
+    background-image: none;
+  }
+
+  .logo-text {
+    font-size: 30px;
+    word-spacing: 8px;
+  }
+
+  main {
+    padding: 48px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    row-gap: 26px;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo-text {
+    font-size: 23px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+  }
+}
