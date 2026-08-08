@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aromas Light | Crear cuenta</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <h1 class="logo-text">Aromas Light</h1>
+  </div>
+</header>
+
+<main>
+  <div class="form-container">
+    <form class="register-form" action="#" method="post">
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej.: Carlos Perez" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha de nacimiento</label>
+          <div class="input-icon">
+            <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aaaa" autocomplete="bday">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+              <line x1="3" y1="9.5" x2="21" y2="9.5"></line>
+              <line x1="8" y1="3" x2="8" y2="7"></line>
+              <line x1="16" y1="3" x2="16" y2="7"></line>
+            </svg>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">N° Telefónico</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="3412345678" autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="ej.: carlosperez" autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <div class="input-icon">
+            <input type="password" id="contrasena" name="contrasena" placeholder="••••••••" autocomplete="new-password">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="btn-primary">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M2 21v-2a6 6 0 0 1 6-6h2a6 6 0 0 1 2.5.5"></path>
+            <line x1="17" y1="8" x2="17" y2="14"></line>
+            <line x1="14" y1="11" x2="20" y2="11"></line>
+          </svg>
+          Crear cuenta
+        </button>
+
+        <p class="login-text">¿Ya tenés cuenta? <a href="#" class="login-link">Iniciar sesión</a></p>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer">
+  <a href="mailto:AromasLight@gmail.com" class="footer-email">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+      <path d="m2 6 10 7 10-7"></path>
+    </svg>
+    AromasLight@gmail.com
+  </a>
+  <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
