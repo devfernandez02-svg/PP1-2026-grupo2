@@ -208,7 +208,7 @@ a {
   outline-offset: -2px;
 }
 
-/* ── Cuerpo del día: grilla de platos + botón de agregar plato ── */
+/* ── Cuerpo del día: grilla de plato + botón de agregar plato ── */
 .day-body {
   display: flex;
   align-items: center;
