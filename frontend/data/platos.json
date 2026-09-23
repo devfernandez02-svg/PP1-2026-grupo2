@@ -7,6 +7,20 @@
     "descripcion": "Guiso de arroz con carne molida, salsa roja, cebolla, morrón y ajo."
   },
   {
+    "dia": "lunes",
+    "titulo": "Guiso",
+    "imagen": "media/guiso.jpg",
+    "alt": "Guiso de arroz con carne",
+    "descripcion": "Guiso de arroz con carne molida, salsa roja, cebolla, morrón y ajo."
+  },
+  {
+    "dia": "lunes",
+    "titulo": "Guiso",
+    "imagen": "media/guiso.jpg",
+    "alt": "Guiso de arroz con carne",
+    "descripcion": "Guiso de arroz con carne molida, salsa roja, cebolla, morrón y ajo."
+  },
+  {
     "dia": "miercoles",
     "titulo": "Pastel de Papa",
     "imagen": "media/pastelpapa.jpg",

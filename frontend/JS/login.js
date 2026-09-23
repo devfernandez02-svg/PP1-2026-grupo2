@@ -1,33 +1,48 @@
-const form = document.querySelector(".formulario"); 
-form.addEventListener(`submit`,function(evento){ // ese ecucha formularios con el submit
-  evento.preventDefault(); //quita el parpadeo o el refresh de la pagina
+const form = document.querySelector(".formulario");
 
-const email = document.querySelector(`#usuario-email`).value;
+form.addEventListener(`submit`, function (evento) {
+  evento.preventDefault(); // quita el parpadeo o el refresh de la pagina
 
-const contraseña = document.querySelector(`#usuario-password`).value;
+  const email = document.querySelector(`#usuario-email`).value;
+  const contraseña = document.querySelector(`#usuario-password`).value;
 
-console.log({email,contraseña});
-//chequea que no este vacio
-const cajaErrorE1 = document.querySelector(`#errorEmail`)
-if (email === ``){
-  cajaErrorE1.textContent = `Campo Obligatorio`
-  cajaErrorE1.classList.add(`visisble`)
-return;
-}
-//chequea el arroba
-const cajaErrorE2 = document.querySelector(`#errorEmail`)
-if (!email.includes("@")){
-  cajaErrorE2.textContent = `Esto no es un correo`
-  cajaErrorE2.classList.add(`visisble`)
-return;
-}
-//valida que la contraseña tenga minimo 8 caracteres
-const cajaErrorC1 = document.querySelector(`#errorEmail`)
-if (contraseña.length < 8){
-  cajaErrorC1.textContent = `La tenes re corta`
-  cajaErrorC1.classList.add(`visisble`)
-return;
-}
+  console.log({ email, contraseña });
 
+  let esValido = true;
 
-})
+  // --- Validación de email ---
+  const cajaErrorEmail = document.querySelector(`#errorEmail`);
+
+  if (email === ``) {
+    cajaErrorEmail.textContent = `Campo Obligatorio`;
+    cajaErrorEmail.classList.add(`visible`);
+    esValido = false;
+  } else if (!email.includes(`@`)) {
+    cajaErrorEmail.textContent = `Esto no es un correo`;
+    cajaErrorEmail.classList.add(`visible`);
+    esValido = false;
+  } else {
+    cajaErrorEmail.textContent = ``;
+    cajaErrorEmail.classList.remove(`visible`);
+  }
+
+  // --- Validación de contraseña ---
+  const cajaErrorContraseña = document.querySelector(`#errorContraseña`);
+
+  if (contraseña.length < 8) {
+    cajaErrorContraseña.textContent = `La contraseña debe tener al menos 8 caracteres`;
+    cajaErrorContraseña.classList.add(`visible`);
+    esValido = false;
+  } else {
+    cajaErrorContraseña.textContent = ``;
+    cajaErrorContraseña.classList.remove(`visible`);
+  }
+
+  // --- Si todo está bien, acá podrías enviar el formulario ---
+  if (esValido) {
+    console.log(`Formulario válido, se puede enviar`);
+    // form.submit(); o tu lógica de envío (fetch, etc.)
+     window.location.href = "config-asistencia.html";
+  }
+
+});

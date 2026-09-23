@@ -264,6 +264,22 @@ body {
   background-attachment: fixed;
 }
 
+#errorEmail.visible,
+#errorContraseña.visible {
+    font-family: sans-serif;
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 6px;
+    border-left: 10px solid red;
+
+}
+
+
 @media (max-width: 640px) {
     .panel {
         padding: 0 28px 48px;

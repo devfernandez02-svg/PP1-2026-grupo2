@@ -31,7 +31,16 @@ function renderPlato(lista, selector) {
   contenedor.innerHTML = lista.map(crearTarjeta).join('');
 }
 
+function mostrarMensaje(texto,tipo){
+  const contenedor = document.querySelector('#grid-lunes');
+  const contenedor2 = document.querySelector('#grid-miercoles');
+  contenedor.innerHTML = `<p class="${tipo}">${texto}</p>`;
+  contenedor2.innerHTML = `<p class="${tipo}">${texto}</p>`;
+}
+
+
 async function cargarPlatos() {
+   mostrarMensaje('Cargando Menu...', 'Cargando');
   try {
     const respuesta = await fetch('data/platos.json');
     if (!respuesta.ok) {
@@ -39,10 +48,16 @@ async function cargarPlatos() {
     }
     const platos = await respuesta.json();
 
+    if(platos.length === 0){
+    mostrarMensaje('Todavia no hay platos.', 'vacio');
+    return;
+  }
+
     renderPlato(platos.filter(p => p.dia === 'lunes'), '#grid-lunes');
     renderPlato(platos.filter(p => p.dia === 'miercoles'), '#grid-miercoles');
   } catch (error) {
     console.error('Error al cargar los platos:', error);
+    mostrarMensaje('Error al cargar los platos. Intente nuevamente más tarde.', 'error');
   }
 }
 
