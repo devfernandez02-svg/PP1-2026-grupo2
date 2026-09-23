@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "empleado": "Carla Gómez",
+    "menu": "Milanesa",
+    "comentario": "Sin sal",
+    "fecha": "2026-06-25"
+  },
+  {
+    "id": 2,
+    "empleado": "Juan Pérez",
+    "menu": "Tallarines",
+    "comentario": "Sin comentarios",
+    "fecha": "2026-06-25"
+  },
+  {
+    "id": 3,
+    "empleado": "Ana López",
+    "menu": "Milanesa",
+    "comentario": "Extra limón",
+    "fecha": "2026-06-25"
+  },
+  {
+    "id": 4,
+    "empleado": "Pedro Ruiz",
+    "menu": "Tarta",
+    "comentario": "Sin queso",
+    "fecha": "2026-06-25"
+  }
+]

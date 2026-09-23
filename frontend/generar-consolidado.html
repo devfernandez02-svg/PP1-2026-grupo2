@@ -74,42 +74,17 @@ Pedidos confirmados
 <th>Comentarios</th>
 </tr>
 </thead>
-<tbody>
 
-<tr>
-<td>Carla Gómez</td>
-<td>Milanesa</td>
-<td>Sin sal</td>
-</tr>
-<tr>
-<td>Juan Pérez</td>
-<td>Tallarines</td>
-<td>Sin comentarios</td>
-</tr>
-<tr>
-<td>Ana López</td>
-<td>Milanesa</td>
-<td>Extra limón</td>
-</tr>
-<tr>
-<td>Pedro Ruiz</td>
-<td>Tarta</td><td>Sin queso</td>
-</tr>
-</tbody>
+<tbody id="cuerpo-consolidado"></tbody>
 </table>
 </section>
 <aside class="totales">
 <h3>
 Totales por opción
 </h3>
-<ul>
-<li>Milanesa × 2</li>
-<li>Tallarines × 1</li>
-<li>Tarta × 1</li>
-</ul>
-<p>
-Total de empleados del día: 4
-</p>
+<ul id="lista-totales"></ul>
+<p id="total-empleados"></p>
+
 </aside>
 </main>
 <footer>
@@ -120,5 +95,8 @@ Total de empleados del día: 4
 © 2026 Aromas Light. Todos los derechos reservados.
 </p>
 </footer>
+
+<script src="JS/generar-consolidado.js"></script>
+
 </body>
 </html>
