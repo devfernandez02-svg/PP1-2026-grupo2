@@ -37,9 +37,9 @@ main.perfil-container{
   height: 130px;
   flex-shrink: 0;
 
-  /* Colocá aquí la imagen de fondo que quieras usar para el header */
+  
   background-color: var(--azul-header);
-  background-image:  url('/frontend/media/foto_comida.png'); 
+  background-image:  url('/frontend/assets/img/foto_comida.png'); 
   background-size: cover;
   background-position: center;
 

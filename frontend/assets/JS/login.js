@@ -38,10 +38,10 @@ form.addEventListener(`submit`, function (evento) {
     cajaErrorContraseña.classList.remove(`visible`);
   }
 
-  // --- Si todo está bien, acá podrías enviar el formulario ---
+ 
   if (esValido) {
     console.log(`Formulario válido, se puede enviar`);
-    // form.submit(); o tu lógica de envío (fetch, etc.)
+   
      window.location.href = "config-asistencia.html";
   }
 

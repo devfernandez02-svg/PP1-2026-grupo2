@@ -52,7 +52,7 @@ body {
 
 header {
   background: #a8d8ea;
- background-image: url('/frontend/media/foto_comida.png');
+ background-image: url('/frontend/assets/img/foto_comida.png');
   background-size: cover;
   background-position: center;
   display: flex;

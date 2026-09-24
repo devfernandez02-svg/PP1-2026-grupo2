@@ -3,7 +3,7 @@
     "id": "lun-01",
     "dia": "lunes",
     "titulo": "Guiso de Arroz",
-    "imagen": "media/guiso.jpg",
+    "imagen": "assets/img/guizo.jfif",
     "alt": "Guiso de arroz con carne",
     "descripcion": "Guiso de arroz con carne molida, salsa roja, cebolla, morrón y ajo."
   },
@@ -11,80 +11,23 @@
     "id": "lun-02",
     "dia": "lunes",
     "titulo": "Milanesa de Pollo con Puré",
-    "imagen": "media/milanesa-pure.jpg",
+    "imagen": "assets/img/suprema.webp",
     "alt": "Milanesa de pollo con puré de papa",
     "descripcion": "Milanesa de pollo al horno acompañada con puré de papa casero."
   },
   {
     "id": "mar-01",
     "dia": "martes",
-    "titulo": "Tarta de Verdura",
-    "imagen": "media/tarta-verdura.jpg",
+    "titulo": "Tarta de Jamon y Queso",
+    "imagen": "assets/img/tarta.jfif",
     "alt": "Tarta de acelga y cebolla",
     "descripcion": "Tarta de acelga, cebolla y queso, con masa integral, acompañada de ensalada."
   },
-  {
-    "id": "mar-02",
-    "dia": "martes",
-    "titulo": "Pollo al Wok",
-    "imagen": "media/pollo-wok.jpg",
-    "alt": "Pollo salteado con vegetales estilo wok",
-    "descripcion": "Bocados de pollo salteados con morrón, brócoli, zanahoria y salsa de soja."
-  },
-  {
-    "id": "mie-01",
+{
+    "id": "mier-01",
     "dia": "miercoles",
-    "titulo": "Pastel de Papa",
-    "imagen": "media/pastelpapa.jpg",
-    "alt": "Pastel de papa",
-    "descripcion": "Base de carne vacuna picada con cebolla y morrón, cubierta por puré de papas gratinado al horno."
-  },
-  {
-    "id": "mie-02",
-    "dia": "miercoles",
-    "titulo": "Ensalada César con Pollo",
-    "imagen": "media/ensalada-cesar.jpg",
-    "alt": "Ensalada César con pollo grillado",
-    "descripcion": "Lechuga, pollo grillado, croutons, parmesano y aderezo César light."
-  },
-  {
-    "id": "jue-01",
-    "dia": "jueves",
-    "titulo": "Fideos con Salsa Bolognesa",
-    "imagen": "media/fideos-bolognesa.jpg",
-    "alt": "Fideos con salsa bolognesa",
-    "descripcion": "Fideos tirabuzón con salsa bolognesa casera y queso rallado."
-  },
-  {
-    "id": "jue-02",
-    "dia": "jueves",
-    "titulo": "Salmón con Vegetales al Horno",
-    "imagen": "media/salmon-vegetales.jpg",
-    "alt": "Salmón al horno con vegetales",
-    "descripcion": "Filet de salmón al horno con zapallo, zanahoria y brócoli asados."
-  },
-  {
-    "id": "vie-01",
-    "dia": "viernes",
-    "titulo": "Empanadas de Carne",
-    "imagen": "media/empanadas-carne.jpg",
-    "alt": "Empanadas de carne cortada a cuchillo",
-    "descripcion": "Empanadas de carne cortada a cuchillo, cebolla, huevo y aceitunas, horneadas."
-  },
-  {
-    "id": "vie-02",
-    "dia": "viernes",
-    "titulo": "Bowl de Quinoa y Vegetales",
-    "imagen": "media/bowl-quinoa.jpg",
-    "alt": "Bowl de quinoa con vegetales grillados",
-    "descripcion": "Quinoa, vegetales grillados, palta, garbanzos y aderezo de limón."
-  },
-  {
-    "id": "sab-02",
-    "dia": "sabado",
-    "titulo": "Bowl de Quinoa y Vegetales",
-    "imagen": "media/bowl-quinoa.jpg",
-    "alt": "Bowl de quinoa con vegetales grillados",
-    "descripcion": "Quinoa, vegetales grillados, palta, garbanzos y aderezo de limón."
-  }
-]
+    "titulo": "Tarta de Verdura",
+    "imagen": "assets/img/tarta-de-verduras.webp",
+    "alt": "Tarta de acelga y cebolla",
+    "descripcion": "Tarta de acelga, cebolla y queso, con masa integral, acompañada de ensalada."
+  }]

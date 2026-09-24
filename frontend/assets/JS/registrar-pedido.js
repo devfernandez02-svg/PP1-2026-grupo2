@@ -38,8 +38,7 @@ const NOMBRES_DIA = {
   miercoles: 'MIÉRCOLES',
   jueves: 'JUEVES',
   viernes: 'VIERNES',
-  sabado: 'SÁBADO',
-  domingo: 'DOMINGO'
+  sabado: 'SÁBADO'
 };
 
 // Días que efectivamente tienen al menos un plato cargado.
@@ -126,7 +125,7 @@ function mostrarErrorGeneral(texto) {
    ══════════════════════════════════════════════ */
 async function cargarPlatos() {
   try {
-    const respuesta = await fetch('data/Platos.json');
+    const respuesta = await fetch('data/platos.json');
     if (!respuesta.ok) {
       throw new Error('No se pudo leer el JSON. Estado: ' + respuesta.status);
     }
