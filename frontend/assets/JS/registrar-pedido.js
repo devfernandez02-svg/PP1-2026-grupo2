@@ -61,6 +61,8 @@ const dialogResumen = document.querySelector('#modal-resumen');
 const formPedido = document.querySelector('#form-pedido');
 const listaResumen = document.querySelector('#resumen-lista');
 const inputComentarios = document.querySelector('#comentarios');
+const dialogError = document.querySelector('#modal-error');
+const mensajeErrorTexto = document.querySelector('#mensaje-error-texto');
 
 /* ══════════════════════════════════════════════
    RENDER
@@ -220,6 +222,7 @@ function obtenerPedidoSeleccionado() {
 /* ══════════════════════════════════════════════
    PASO 2: MOSTRAR EL POPUP CON EL RESUMEN
    ══════════════════════════════════════════════ */
+   
 function abrirResumen(pedido) {
   pedidoPendiente = pedido;
 
@@ -234,16 +237,26 @@ function abrirResumen(pedido) {
   dialogResumen.showModal();
 }
 
+// Muestra un error en un popup aparte, chico, solo con "Aceptar".
+function mostrarError(texto) {
+  mensajeErrorTexto.textContent = texto;
+  dialogError.showModal();
+}
+
+document.querySelector('#btn-aceptar-error').addEventListener('click', () => {
+  dialogError.close();
+});
+
 document.querySelector('#btn-guardar').addEventListener('click', () => {
   if (diasConPlatosDisponibles.length === 0) {
-    alert('No hay platos disponibles para guardar un pedido.');
+    mostrarError('No hay platos disponibles para guardar un pedido.');
     return;
   }
 
   const { pedido, faltantes } = obtenerPedidoSeleccionado();
 
   if (faltantes.length > 0) {
-    alert('Falta elegir un plato para: ' + faltantes.join(', '));
+    mostrarError('Falta elegir un plato para: ' + faltantes.join(', '));
     return;
   }
 
@@ -259,6 +272,7 @@ document.querySelector('#btn-volver-seleccionar').addEventListener('click', () =
 /* ══════════════════════════════════════════════
    PASO 3: CONFIRMAR Y GUARDAR
    ══════════════════════════════════════════════ */
+  
 async function guardarPedido(pedido) {
   pedidos.push(pedido); // hoy: en memoria
 }
@@ -270,8 +284,29 @@ function renderPedidos() {
   console.log('Pedidos guardados hasta ahora:', pedidos);
 }
 
+// Toast simple para avisar que el pedido se confirmó, sin usar alert().
+function mostrarToast(texto) {
+  const toast = document.createElement('div');
+  toast.className = 'toast-confirmacion';
+  toast.textContent = texto;
+  document.body.appendChild(toast);
+
+  setTimeout(() => toast.classList.add('toast-visible'), 10);
+  setTimeout(() => {
+    toast.classList.remove('toast-visible');
+    setTimeout(() => toast.remove(), 300);
+  }, 2500);
+}
+
 formPedido.addEventListener('submit', async (e) => {
   e.preventDefault(); // evita que el form recargue la página
+
+  // Si por algún motivo no hay pedido pendiente (se envió el
+  // form estando en modo error), no hay nada que guardar.
+  if (!pedidoPendiente) {
+    dialogResumen.close();
+    return;
+  }
 
   const nuevoPedido = {
     platos: pedidoPendiente,
@@ -284,7 +319,8 @@ formPedido.addEventListener('submit', async (e) => {
 
   dialogResumen.close();
   pedidoPendiente = null;
-  alert('¡Pedido confirmado!');
+  cancelarPedido(); // limpia las tarjetas ya que el pedido quedó confirmado
+  mostrarToast('¡Pedido confirmado!');
 });
 
 function cancelarPedido() {
@@ -295,5 +331,8 @@ function cancelarPedido() {
 }
 
 document.querySelector('#btn-cancelar').addEventListener('click', cancelarPedido);
+
+
+
 
 cargarPlatos();

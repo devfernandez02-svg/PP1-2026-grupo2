@@ -10,6 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
 </head>
 <body>
 
@@ -43,6 +44,7 @@
   </main>
 
   <!-- ═══════════════════════ POPUP: RESUMEN DE PEDIDO ═══════════════════════ -->
+   
   <dialog id="modal-resumen" class="modal-resumen">
     <form id="form-pedido" class="modal-form">
       <h2 class="modal-titulo">Resumen de tu pedido</h2>
@@ -67,6 +69,17 @@
         </button>
       </div>
     </form>
+  </dialog>
+
+  <!-- ═══════════════════════ POPUP: ERROR ═══════════════════════ -->
+
+  <dialog id="modal-error" class="modal-error">
+    <p id="mensaje-error-texto" class="mensaje-error"></p>
+    <div class="modal-acciones modal-acciones--centrado">
+      <button type="button" id="btn-aceptar-error" class="btn-confirm">
+        Aceptar
+      </button>
+    </div>
   </dialog>
 
   <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
