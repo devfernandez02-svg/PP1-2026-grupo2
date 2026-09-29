@@ -42,7 +42,7 @@ form.addEventListener(`submit`, function (evento) {
   if (esValido) {
     console.log(`Formulario válido, se puede enviar`);
    
-     window.location.href = "config-asistencia.html";
+     window.location.href = "Pantalla_2-config-asistencia.html";
   }
 
 });
