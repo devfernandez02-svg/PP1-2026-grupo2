@@ -1,10 +1,4 @@
-/* ══════════════════════════════════════════════
-   CONFIGURAR DÍAS DE ASISTENCIA (Pantalla 2)
-   Toma los días marcados y navega a la Pantalla 3
-   pasándolos por query string:
-     Pantalla_3-registrar-pedido.html?dias=lunes,miercoles
-   registrar-pedido.js ya lee ese parámetro "dias".
-   ══════════════════════════════════════════════ */
+
 
 // Ruta de la pantalla destino. Si tus HTML están en carpetas
 // distintas, cambiá SOLO esta línea (ej: '/frontend/pages/...').
