@@ -170,6 +170,11 @@ main {
     min-height: 80px;
 }
 
+/* separa la caja de comentarios de cada día de su tarjeta */
+.Dia .caja-comentarios {
+    margin-top: 20px;
+}
+
 
 .fila-enviar {
     display: flex;
