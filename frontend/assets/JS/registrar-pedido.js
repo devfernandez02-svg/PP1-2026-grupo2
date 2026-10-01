@@ -321,6 +321,16 @@ formPedido.addEventListener('submit', async (e) => {
   pedidoPendiente = null;
   cancelarPedido(); // limpia las tarjetas ya que el pedido quedó confirmado
   mostrarToast('¡Pedido confirmado!');
+
+  // Pasa a la Pantalla 4 el plato elegido para cada día, por URL
+  // (?lunes=Guiso+de+Arroz&miercoles=Tarta+de+Verdura)
+  const parametros = new URLSearchParams();
+  Object.entries(nuevoPedido.platos).forEach(([dia, plato]) => {
+    parametros.append(dia, plato.titulo);
+  });
+  setTimeout(() => {
+    window.location.href = 'Pantalla_4-resumen-pedido.html?' + parametros.toString();
+  }, 1500);
 });
 
 function cancelarPedido() {
