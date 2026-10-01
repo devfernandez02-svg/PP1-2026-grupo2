@@ -4,7 +4,7 @@ form.addEventListener(`submit`, function (evento) {
   evento.preventDefault(); // quita el parpadeo o el refresh de la pagina
 
   const email = document.querySelector(`#usuario-email`).value;
-  const contraseña = document.querySelector(`#usuario-password`).value;
+  const contraseña = document.querySelector(`#usuario-password`).value;     //obtiene email/contraseña
 
   console.log({ email, contraseña });
 
