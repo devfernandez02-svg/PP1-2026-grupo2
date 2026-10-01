@@ -22,7 +22,7 @@ if (!mensajeError) {
   document.querySelector('.days-grid').after(mensajeError);
 }
 
-/* ── Utilidades ── */
+
 
 // El id de cada checkbox (lunes, martes, miercoles...) coincide con el
 // campo "dia" de platos.json, así que se usa directamente como valor.

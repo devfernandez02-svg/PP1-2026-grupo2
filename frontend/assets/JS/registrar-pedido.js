@@ -335,6 +335,7 @@ formPedido.addEventListener('submit', async (e) => {
   pedidoPendiente = null;
   cancelarPedido(); // limpia las tarjetas ya que el pedido quedó confirmado
   mostrarToast('¡Pedido confirmado!');
+  window.location.href = "Pantalla_4-resumen-pedido.html";
 });
 
 function cancelarPedido() {
