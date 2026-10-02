@@ -9,28 +9,39 @@ const ICONO_CHECK = `
    DÍAS RECIBIDOS
    La pantalla recibe los días a mostrar. Acá se leen
    desde la query string (?dias=lunes,miercoles,jueves).
-   Si no viene nada (por ejemplo, al abrir el archivo
-   directamente para probar), se usa un valor por defecto.
+   Si no viene nada, NO se muestra el menú: se avisa al usuario
+   y se le ofrece volver a la pantalla de configuración.
    ══════════════════════════════════════════════ */
+// Días permitidos, en el orden en que se muestran en pantalla.
+// Sirve como "lista blanca": cualquier otro valor de la URL se descarta.
+const DIAS_VALIDOS = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+
+// "  Miércoles " -> "miercoles" (sin tildes, sin espacios, en minúsculas)
+function normalizarDia(texto) {
+  return texto
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
+
 function obtenerDiasRecibidos() {
   const params = new URLSearchParams(window.location.search);
   const diasParam = params.get('dias');
-  if (diasParam) {
-    return diasParam
-      .split(',')
-      .map(d => d.trim().toLowerCase())
-      .filter(Boolean);
-  }
-  // No llegó ningún día por URL: se devuelve vacío y más abajo
-  // se completa con los días que efectivamente traiga platos.json
-  // (así no hace falta un segundo fetch ni un valor fijo hardcodeado).
-  return [];
+
+  // Si no llegó el parámetro NO se inventan días: se devuelve vacío
+  // y cargarPlatos() muestra un aviso en lugar de todo el menú.
+  if (!diasParam) return [];
+
+  const recibidos = new Set(diasParam.split(',').map(normalizarDia));
+
+  // Se filtra contra DIAS_VALIDOS: descarta días inexistentes,
+  // elimina repetidos y ordena de lunes a sábado.
+  return DIAS_VALIDOS.filter(dia => recibidos.has(dia));
 }
 
-// Días que se van a mostrar. Si vinieron por URL, son esos.
-// Si no vino ninguno, se completan con lo que traiga platos.json
-// una vez que se resuelve el único fetch que usa la pantalla.
-let DIAS_RECIBIDOS = obtenerDiasRecibidos();
+// Días que se van a mostrar. Nunca se reasigna.
+const DIAS_RECIBIDOS = obtenerDiasRecibidos();
 
 const NOMBRES_DIA = {
   lunes: 'LUNES',
@@ -126,19 +137,22 @@ function mostrarErrorGeneral(texto) {
    CARGA DE PLATOS
    ══════════════════════════════════════════════ */
 async function cargarPlatos() {
+  // Sin días recibidos no hay nada que mostrar: se avisa y se corta.
+  if (DIAS_RECIBIDOS.length === 0) {
+    mostrarErrorGeneral(
+      'No se recibieron días de asistencia. ' +
+      '<a href="Pantalla_2-config-asistencia.html">Volver a configurar los días</a>'
+    );
+    document.querySelector('.actions-bar').style.display = 'none';
+    return;
+  }
+
   try {
     const respuesta = await fetch('data/platos.json');
     if (!respuesta.ok) {
       throw new Error('No se pudo leer el JSON. Estado: ' + respuesta.status);
     }
     const platos = await respuesta.json();
-
-    // Si no llegó ningún día por URL, se usan los días que
-    // efectivamente aparecen en platos.json (en el orden en que
-    // aparecen ahí), sin necesidad de un segundo fetch.
-    if (DIAS_RECIBIDOS.length === 0) {
-      DIAS_RECIBIDOS = [...new Set(platos.map(p => p.dia))];
-    }
 
     crearContenedoresDias();
     diasConPlatosDisponibles = [];
