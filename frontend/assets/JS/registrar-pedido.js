@@ -298,19 +298,38 @@ function renderPedidos() {
   console.log('Pedidos guardados hasta ahora:', pedidos);
 }
 
-// Toast simple para avisar que el pedido se confirmó, sin usar alert().
-function mostrarToast(texto) {
-  const toast = document.createElement('div');
-  toast.className = 'toast-confirmacion';
-  toast.textContent = texto;
-  document.body.appendChild(toast);
+// Aviso centrado de éxito (reemplaza al toast chico de abajo).
+// Se crea desde JS, así no hace falta tocar el HTML.
+const PANTALLA_RESUMEN = 'Pantalla_4-resumen-pedido.html';
+const ESPERA_REDIRECCION_MS = 2000; // tiempo que se ve "Pedido guardado"
 
-  setTimeout(() => toast.classList.add('toast-visible'), 10);
-  setTimeout(() => {
-    toast.classList.remove('toast-visible');
-    setTimeout(() => toast.remove(), 300);
-  }, 2500);
+function mostrarMensajeExito(texto) {
+  const aviso = document.createElement('div');
+  aviso.className = 'aviso-exito';
+  aviso.setAttribute('role', 'status');      // los lectores de pantalla lo anuncian
+  aviso.setAttribute('aria-live', 'polite');
+  aviso.innerHTML = `
+    <div class="aviso-exito__caja">
+      <div class="aviso-exito__icono">${ICONO_CHECK}</div>
+      <p class="aviso-exito__texto"></p>
+    </div>
+  `;
+  // textContent y no innerHTML: el texto nunca se interpreta como HTML
+  aviso.querySelector('.aviso-exito__texto').textContent = texto;
+  document.body.appendChild(aviso);
+
+  // Un instante después se agrega la clase para que corra la animación
+  requestAnimationFrame(() => aviso.classList.add('aviso-exito--visible'));
 }
+
+// Si el usuario vuelve con el botón "atrás" y el navegador restaura
+// la página desde memoria, se limpia el aviso y se rehabilita el botón.
+window.addEventListener('pageshow', (evento) => {
+  if (!evento.persisted) return;
+  document.querySelector('.aviso-exito')?.remove();
+  const botonConfirmar = formPedido.querySelector('button[type="submit"]');
+  if (botonConfirmar) botonConfirmar.disabled = false;
+});
 
 formPedido.addEventListener('submit', async (e) => {
   e.preventDefault(); // evita que el form recargue la página
@@ -321,6 +340,10 @@ formPedido.addEventListener('submit', async (e) => {
     dialogResumen.close();
     return;
   }
+
+  // Evita que un doble clic guarde el pedido dos veces
+  const botonConfirmar = formPedido.querySelector('button[type="submit"]');
+  botonConfirmar.disabled = true;
 
   const nuevoPedido = {
     platos: pedidoPendiente,
@@ -342,9 +365,12 @@ formPedido.addEventListener('submit', async (e) => {
   dialogResumen.close();
   pedidoPendiente = null;
 
-  // Redirigimos LLEVANDO los platos en la URL. Antes se iba sin parámetros,
-  // por eso la Pantalla 4 no tenía nada para mostrar.
-  window.location.href = 'Pantalla_4-resumen-pedido.html?' + params.toString();
+  // Mensaje visible, y recién después de un momento pasamos a la Pantalla 4
+  // LLEVANDO los platos en la URL.
+  mostrarMensajeExito('Pedido guardado');
+  setTimeout(() => {
+    window.location.href = PANTALLA_RESUMEN + '?' + params.toString();
+  }, ESPERA_REDIRECCION_MS);
 });
 
 function cancelarPedido() {

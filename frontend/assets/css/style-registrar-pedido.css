@@ -44,7 +44,7 @@ a {
       rgba(20, 20, 20, 0.55) 0%,
       rgba(192, 24, 42, 0.45) 
     ),
-    url('/frontend/assets/img/foto_comida.png')
+    url('../img/foto_comida.png')
       center / cover no-repeat;
   min-height: 240px;
   display: flex;
@@ -399,29 +399,74 @@ a {
 }
 
 /* ══════════════════════════════════════════════
-   TOAST DE CONFIRMACIÓN
+   AVISO DE ÉXITO ("Pedido guardado")
+   Capa centrada sobre toda la pantalla
    ══════════════════════════════════════════════ */
-.toast-confirmacion {
+.aviso-exito {
   position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background: #0e9515;
-  color: #ffffff;
-  padding: 0.85rem 1.5rem;
-  border-radius: 10px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(28, 28, 28, 0.55);
+  backdrop-filter: blur(2px);
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 999;
+  transition: opacity 0.25s ease;
 }
 
-.toast-visible {
+.aviso-exito--visible {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+}
+
+.aviso-exito__caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: min(340px, 90vw);
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+}
+
+.aviso-exito--visible .aviso-exito__caja {
+  transform: scale(1);
+}
+
+.aviso-exito__icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0e9515;
+  color: #ffffff;
+}
+
+.aviso-exito__icono svg {
+  width: 34px;
+  height: 34px;
+}
+
+.aviso-exito__texto {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1C1C1C;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aviso-exito,
+  .aviso-exito__caja {
+    transition: none;
+  }
 }
 
 /* ══════════════════════════════════════════════
