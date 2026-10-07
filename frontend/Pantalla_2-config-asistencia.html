@@ -13,8 +13,6 @@
 
 <header>
 
- 
-
   <div class="header-icons">
   <!-- Botón Home — cambiá href="#" por la URL de tu página de inicio -->
   <a href="#" class="icon-btn" title="Inicio">
@@ -31,8 +29,6 @@
 
   <span class="header-arrow">&#8250;</span>
 
- 
-
 </header>
 
 <!-- CONTENIDO PRINCIPAL -->
@@ -40,7 +36,11 @@
   <h1 class="welcome">BIENVENIDO!</h1>
   <p class="subtitle">Seleccione los dias de la semana que asistira a la empresa</p>
 
-  
+  <!--
+    IMPORTANTE: el id de cada checkbox (lunes, martes, miercoles...)
+    es el valor que viaja a la Pantalla 3 y debe coincidir con el
+    campo "dia" de platos.json. No cambiar sin actualizar ambos lados.
+  -->
   <div class="days-grid">
 
     <!-- DOMINGO 
@@ -73,13 +73,16 @@
 
   </div>
 
+  <!-- Mensaje de validación (oculto hasta que haga falta) -->
+  <p id="mensaje-error" class="mensaje-error-dias" role="alert" hidden></p>
+
   <div class="bottom-row">
     <p class="info-text">Los dias seleccionados se utilizaran para filtrar los menus disponibles</p>
     <div class="btn-group">
-      <!-- Cancelar: recarga la página para resetear los checkboxes -->
-      <a href="" class="btn btn-cancel">Cancelar</a>
-      <!-- Confirmar: enlazá a tu página siguiente o acción -->
-      <a href="#" class="btn btn-confirm">Confirmar</a>
+      <!-- Cancelar: el JS restablece los checkboxes a su estado inicial -->
+      <a href="#" id="btn-cancelar" class="btn btn-cancel">Cancelar</a>
+      <!-- Confirmar: el JS arma la URL con los días y navega a la Pantalla 3 -->
+      <a href="#" id="btn-confirmar" class="btn btn-confirm">Confirmar</a>
     </div>
   </div>
 </main>
@@ -93,5 +96,6 @@
   <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
 </footer>
 
+<script src="/frontend/assets/JS/config-asistencia.js"></script>
 </body>
 </html>
