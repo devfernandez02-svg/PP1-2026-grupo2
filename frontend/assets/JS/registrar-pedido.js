@@ -71,7 +71,7 @@ let pedidoPendiente = null;
 const dialogResumen = document.querySelector('#modal-resumen');
 const formPedido = document.querySelector('#form-pedido');
 const listaResumen = document.querySelector('#resumen-lista');
-const inputComentarios = document.querySelector('#comentarios');
+//const inputComentarios = document.querySelector('#comentarios');
 const dialogError = document.querySelector('#modal-error');
 const mensajeErrorTexto = document.querySelector('#mensaje-error-texto');
 
@@ -247,7 +247,7 @@ function abrirResumen(pedido) {
     })
     .join('');
 
-  inputComentarios.value = '';
+  //inputComentarios.value = '';
   dialogResumen.showModal();
 }
 
@@ -347,7 +347,7 @@ formPedido.addEventListener('submit', async (e) => {
 
   const nuevoPedido = {
     platos: pedidoPendiente,
-    comentarios: inputComentarios.value.trim(),
+  //  comentarios: inputComentarios.value.trim(),
     fecha: new Date().toISOString()
   };
 
