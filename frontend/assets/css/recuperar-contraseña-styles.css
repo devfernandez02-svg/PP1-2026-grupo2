@@ -1,0 +1,175 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+--fondo-pagina: #0c48688d;
+  --fondo-panel: #001230;
+  --fondo-input: #05001c;
+  --azul-boton: #0047cc;
+  --rojo: #e8231f;
+  --blanco: #ffffff;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--blanco);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+   
+}
+
+body::before{
+   content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("/frontend/assets/img/fondo.jpeg");
+  background-repeat: repeat;
+  background-size: 500px auto;
+  filter: brightness(0.3);
+}
+
+.panel {
+  width: 500px;
+  min-height: 100vh;
+  background-color: var(--fondo-panel);
+  padding: 20px 96px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 68px;
+}
+
+.logo img {
+  width: 165px;
+  height: auto;
+  display: block;
+}
+
+/* Textos */
+.textos {
+  margin-top: 26px;
+}
+
+.textos h1 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.textos p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* Formulario */
+form {
+  margin-top: 24px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-left: 2px;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  display: block;
+  width: 291px;
+  height: 38px;
+  margin-left: 2px;
+  padding: 0 12px;
+  background-color: var(--fondo-input);
+  border: 1px solid #14102e;
+  border-radius: 5px;
+  color: var(--blanco);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: var(--azul-boton);
+}
+
+button {
+  display: block;
+  width: 266px;
+  height: 42px;
+  margin-top: 35px;
+  margin-left: 5px;
+  background-color: var(--azul-boton);
+  color: var(--blanco);
+  border: none;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0a56e6;
+}
+
+/* Volver */
+.volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 40px;
+  color: var(--rojo);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#errorEmail.visible,
+#errorContraseña.visible {
+    font-family: sans-serif;
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 6px;
+    border-left: 10px solid red;
+
+}
+
+.volver svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 440px) {
+  .panel {
+    width: 100%;
+    padding: 0 28px;
+  }
+
+  input[type="email"],
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .textos p {
+    white-space: normal;
+  }
+}

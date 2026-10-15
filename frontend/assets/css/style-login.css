@@ -44,7 +44,7 @@ body::before {
     inset: 0;
     background-image: url("/frontend/assets/img/fondo.jpeg");
     background-size: 500px 500px;
-    filter: brightness(0.3);
+   filter: brightness(0.3);
     pointer-events: none;
     z-index: 0;
 }

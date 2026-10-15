@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aromas Light - Recuperar contraseña</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/assets/css/recuperar-contraseña-styles.css">
+</head>
+<body>
+
+  <main class="panel">
+
+    <div class="logo">
+      <!-- Poné acá tu logo -->
+      <img src="/frontend/assets/img/logo.jpeg" alt="Aromas Light Viandas">
+    </div>
+
+    <section class="textos">
+      <h1>Te olvidaste la&nbsp; contraseña?</h1>
+      <p>Para recuperar la contraseña&nbsp; ingrese su Email</p>
+    </section>
+
+    <form class="formulario" novalidate action="#" method="post">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+      <p id="errorEmail"></p>
+      <button type="submit">Recuperar contraseña</button>
+    </form>
+
+    <a href="/frontend/Pantalla_1-login.html" class="volver">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10.5"/>
+        <path d="M18 12H6"/>
+        <path d="M11 7l-5 5 5 5"/>
+      </svg>
+      Volver
+    </a>
+ <script src="/frontend/assets/JS/recuperar-contraseña.js"></script>
+  </main>
+
+</body>
+</html>
