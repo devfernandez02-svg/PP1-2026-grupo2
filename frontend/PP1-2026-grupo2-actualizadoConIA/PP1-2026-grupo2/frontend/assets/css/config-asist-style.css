@@ -1,0 +1,334 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0d1b3e;
+  --red: #cc2222;
+  --green: #2e8b2e;
+  --gray-day: #5a6275;
+  --white: #ffffff;
+  --footer-bg: #f0f0f0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--footer-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background .2s ease, transform .15s ease;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+.icon-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+
+header {
+  background: #a8d8ea;
+ background-image: url('../img/foto_comida.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  height: 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.header-img-left,
+.header-img-right {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 200px;
+  object-fit: cover;
+  opacity: .9;
+}
+.header-img-left  { left: 0; }
+.header-img-right { right: 0; transform: scaleX(-1); }
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  z-index: 1;
+  margin-left: 190px;
+}
+
+.header-icons svg {
+  width: 32px; height: 32px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: .12em;
+  color: #111;
+  z-index: 1;
+}
+
+.header-arrow {
+  z-index: 1;
+  margin-right: 190px;
+  font-size: 2.4rem;
+  color: #2e8b2e;
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ── MAIN ── */
+main {
+  background: var(--navy);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 60px;
+}
+
+.welcome {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: .05em;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #c8cfe0;
+  font-size: 1rem;
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.days-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+
+.day-input { display: none; }
+
+.day-label {
+  width: 120px;
+  height: 110px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--gray-day);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .15s ease, box-shadow .15s ease;
+  user-select: none;
+}
+
+.day-label:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.4);
+}
+.day-label:active { transform: scale(.96); }
+
+.day-label span {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,.7);
+  pointer-events: none;
+  transform: rotate(-45deg);
+  white-space: nowrap;
+}
+
+
+.day-input:checked + .day-label {
+  background: var(--green);
+}
+
+
+.starts-red { background: var(--red); }
+.day-input:checked + .starts-red {
+  background: var(--green);
+}
+
+/* ── BOTTOM ROW ── */
+.bottom-row {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.info-text {
+  color: #c8cfe0;
+  font-size: .93rem;
+  max-width: 340px;
+  line-height: 1.6;
+}
+
+.btn-group { display: flex; gap: 14px; }
+
+.btn {
+  padding: 14px 38px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter .15s, transform .1s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover  { filter: brightness(1.15); }
+.btn:active { transform: scale(.97); }
+.btn-cancel  { background: #9b1c1c; color: var(--white); }
+.btn-confirm { background: var(--green); color: var(--white); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--footer-bg);
+    background: #1C1C1C;
+  padding: 28px 16px 18px;
+  text-align: center;
+  color: #D4A843;
+}
+.footer-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.footer-email svg {
+  width: 22px; height: 22px;
+  fill: none; stroke: #D4A843;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.footer-copy { font-size: .82rem; color: #666; }
+
+@media (max-width: 620px) {
+  .day-label { width: 90px; height: 84px; }
+  .day-label span { font-size: .78rem; }
+  .header-title { font-size: 1.6rem; }
+  .header-img-left, .header-img-right { display: none; }
+  .header-icons { margin-left: 0; }
+  .header-arrow { margin-right: 0; }
+}
+
+/* ── Mensaje de validación de días ── */
+.mensaje-error-dias {
+  color: #ffb3b3;
+  background: rgba(204, 34, 34, 0.18);
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin-bottom: 24px;
+  font-size: .95rem;
+  text-align: center;
+}
+
+/* Necesario: display:flex/block de otras reglas podría pisar el atributo hidden */
+.mensaje-error-dias[hidden] { display: none; }
+
+/* ══════════════════════════════════════════════
+   Agregado: fecha de cada día, rango de la semana
+   y días feriados bloqueados (los marca el JS)
+   ══════════════════════════════════════════════ */
+.semana-info {
+  color: #D4A843;
+  font-weight: 700;
+  letter-spacing: .04em;
+  margin: -36px 0 36px;
+  text-align: center;
+}
+
+.dia-fecha {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .85);
+  pointer-events: none;
+}
+
+.day-input:disabled + .day-label,
+.day-label.dia-feriado {
+  background: repeating-linear-gradient(135deg, var(--red) 0 12px, #a81c1c 12px 24px);
+  cursor: not-allowed;
+  opacity: .85;
+}
+
+.day-input:disabled + .day-label:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.day-label.dia-feriado::before {
+  content: attr(data-feriado);
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: 'Lato', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #1C1C1C;
+  background: #D4A843;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.header-arrow:focus-visible { outline: 2px solid #2e8b2e; outline-offset: 4px; }

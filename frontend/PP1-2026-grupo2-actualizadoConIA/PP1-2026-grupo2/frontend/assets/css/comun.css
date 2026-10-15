@@ -1,0 +1,304 @@
+/* ══════════════════════════════════════════════════════════════
+   comun.css — Estilos COMPARTIDOS por todas las pantallas
+   (barra de navegación, avisos, confirmaciones y badges).
+   Todas las clases usan el prefijo "al-" para no pisar los
+   estilos propios de cada pantalla ni los de Bootstrap.
+   Colores tomados de la paleta existente: negro #1C1C1C,
+   dorado #D4A843, rojo #C0182A y verde #0e9515.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ───────────── Barra de navegación ───────────── */
+.al-barra {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  background: #1C1C1C;
+  border-bottom: 3px solid #D4A843;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.al-barra__interior {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.al-barra__saludo {
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.al-barra__saludo strong { color: #ffffff; }
+
+.al-barra__rol {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1C1C1C;
+  background: #D4A843;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.al-barra__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.al-barra__link,
+.al-barra__salir {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  color: #D4A843 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: inherit;
+  transition: background 0.2s, color 0.2s;
+}
+
+.al-barra__link:hover,
+.al-barra__link:focus-visible {
+  background: rgba(212, 168, 67, 0.15);
+  color: #f0c85c !important;
+  outline: none;
+}
+
+.al-barra__link--activo {
+  background: #D4A843;
+  color: #1C1C1C !important;
+}
+
+.al-barra__link--activo:hover { color: #1C1C1C !important; background: #f0c85c; }
+
+.al-barra__salir {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+  cursor: pointer;
+  margin: 0 0 0 0.35rem;
+  width: auto;
+  height: auto;
+  line-height: 1.3;
+}
+
+.al-barra__salir:hover { background: #C0182A; border-color: #C0182A; }
+
+@media (max-width: 600px) {
+  .al-barra__interior { justify-content: center; text-align: center; }
+  .al-barra__links { justify-content: center; }
+  .al-barra__link, .al-barra__salir { padding: 0.35rem 0.55rem; font-size: 0.82rem; }
+}
+
+/* ───────────── Toasts (avisos chicos) ───────────── */
+.al-toasts {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.al-toast {
+  max-width: 380px;
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+  background: #1C1C1C;
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-left: 6px solid #D4A843;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.al-toast--visible { opacity: 1; transform: translateY(0); }
+.al-toast--exito { border-left-color: #0e9515; }
+.al-toast--error { border-left-color: #C0182A; }
+.al-toast--info  { border-left-color: #D4A843; }
+
+/* ───────────── Diálogo de confirmación ───────────── */
+.al-dialogo {
+  border: none;
+  border-radius: 16px;
+  margin: auto;
+  padding: 1.75rem;
+  width: min(420px, 92vw);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #1C1C1C;
+}
+
+.al-dialogo::backdrop {
+  background: rgba(28, 28, 28, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.al-dialogo__titulo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.6rem;
+  color: #1C1C1C;
+}
+
+.al-dialogo__mensaje {
+  margin: 0 0 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #5A5A5A;
+  white-space: pre-line;
+}
+
+.al-dialogo__acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.al-btn {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.al-btn--primario   { background: green; }
+.al-btn--primario:hover { background: #0e9515; }
+.al-btn--peligro    { background: #C0182A; }
+.al-btn--peligro:hover { background: #a01423; }
+.al-btn--secundario { background: #6c757d; }
+.al-btn--secundario:hover { background: #5a6268; }
+
+/* ───────────── Aviso de éxito centrado ───────────── */
+.al-exito {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(28, 28, 28, 0.55);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.al-exito--visible { opacity: 1; }
+
+.al-exito__caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: min(340px, 90vw);
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.al-exito__icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0e9515;
+  color: #ffffff;
+}
+
+.al-exito__icono svg { width: 34px; height: 34px; }
+
+.al-exito__texto {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1C1C1C;
+  text-align: center;
+}
+
+/* ───────────── Badges de tarjetas (stock / feriado) ───────────── */
+.al-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: rgba(212, 168, 67, 0.95);
+  color: #1C1C1C;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.al-badge--agotado { background: #1C1C1C; color: #ffffff; }
+
+/* Tarjeta de plato sin stock (Pantalla 3) */
+.al-agotada { opacity: 0.55; filter: grayscale(0.6); }
+.al-agotada .card-btn { cursor: not-allowed; }
+
+/* Fecha al lado del nombre del día (Pantalla 3) */
+.al-fecha-dia {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 0.55em;
+  font-weight: 500;
+  color: #5A5A5A;
+  margin-left: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* Mensaje de día feriado (Pantallas 3 y 2) */
+.al-mensaje-feriado {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 1.5rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.05rem;
+  color: #ffffff;
+  background: repeating-linear-gradient(135deg, #C0182A 0 14px, #b0152a 14px 28px);
+  border-radius: 10px;
+}
+
+.al-oculto { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .al-toast, .al-exito { transition: none; }
+}

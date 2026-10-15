@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromas Ligth - Iniciar Sesión</title>
+    <!-- Si el HTML está dentro de la carpeta frontend -->
+<link rel="stylesheet" href="assets/css/style-login.css">
+    <link rel="stylesheet" href="assets/css/comun.css">
+      <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+</head>
+<body>
+
+    <main>
+        <div class="panel">
+
+            <!-- LOGO -->
+            <div class="logo-wrapper">
+                <img src="assets/img/logo.jpeg" alt="Aromas Ligth Viandas" class="logo">
+            </div>
+
+            <!-- FORMULARIO -->
+            <form class="formulario" novalidate action="#" method="post">
+
+                <!-- Email -->
+                <div class="grupo-campo">
+                    <label for="usuario-email">Email</label>
+                    <input type="text" id="usuario-email" name="email" required placeholder="Introduce el email">
+                    <p id="errorEmail"></p>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="grupo-campo">
+                    <div class="label-row">
+                        <label for="usuario-password">Contraseña</label>
+                        <a href="Pantalla_10-recuperar-contrasena.html" class="recuperar">Recuperar contraseña</a>
+                    </div>
+                    <input type="password" id="usuario-password" name="password" required placeholder="Introduce la contraseña">
+                    <p id="errorContraseña"></p>
+                </div>
+
+                <!-- Botones principales -->
+                <button type="submit" class="btn-iniciar">Iniciar Sesión</button>
+                <button type="button" class="btn-registrar">Registrarse</button>
+
+               
+
+            </form>
+        </div>
+        <script src="assets/JS/datos.js"></script>
+<script src="assets/JS/ui.js"></script>
+<script src="assets/JS/login.js"></script>
+    </main>
+
+</body>
+</html>

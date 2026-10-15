@@ -1,0 +1,6 @@
+[
+  { "id": 1, "usuario": "carlosperez", "email": "carlosperez@gmail.com" },
+  { "id": 2, "usuario": "carlagomez", "email": "carla.gomez@gmail.com" },
+  { "id": 3, "usuario": "juanperez", "email": "juan.perez@gmail.com" },
+  { "id": 4, "usuario": "analopez", "email": "ana.lopez@gmail.com" }
+]

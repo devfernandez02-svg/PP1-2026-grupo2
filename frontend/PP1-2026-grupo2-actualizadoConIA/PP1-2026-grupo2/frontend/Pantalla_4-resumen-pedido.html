@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aromas Light – Resumen del pedido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/resumen-pedido.css">
+  <link rel="stylesheet" href="assets/css/comun.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-bg">
+      <div class="header-content">
+        <h1 class="header-title">AROMAS LIGHT</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2 id="intro">Verificá tus pedidos antes de confirmar</h2>
+
+    <!-- Los días con su plato y su comentario los arma resumen-pedido.js
+         a partir de lo que llega por URL desde la Pantalla 3 -->
+    <section class="contenedor"></section>
+
+    <section class="seccion-inferior">
+      <div class="fila-botones">
+        <button class="btn-verde" id="btn-confirmar" type="button">Confirmar</button>
+        <button class="btn-rojo" id="btn-cancelar" type="button">Cancelar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:AromasLight@gmail.com">AromasLight@gmail.com</a>
+      </div>
+      <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<script src="assets/JS/datos.js"></script>
+<script src="assets/JS/ui.js"></script>
+<script src="assets/JS/resumen-pedido.js"></script>
+</body>
+</html>

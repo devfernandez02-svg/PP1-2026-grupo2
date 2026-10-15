@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aromas Light – Administrar Menú</title>
+  <link rel="stylesheet" href="assets/css/admin-menu.css" />
+  <link rel="stylesheet" href="assets/css/comun.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+</head>
+<body>
+
+  <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+  <header class="site-header">
+    <div class="header-bg">
+      <div class="header-content">
+        <h1 class="header-title">AROMAS LIGHT</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════ MENÚ (ADMIN) ═══════════════════════ -->
+  <main id="menu" class="menu-main">
+
+    <!--
+      Las secciones de cada día (selector de día, platos y botones)
+      las arma admin-menu.js a partir del menú publicado o de
+      data/platos.json. Mantienen exactamente el mismo HTML/CSS
+      que tenía el diseño estático original.
+    -->
+    <div id="dias-admin"></div>
+
+    <!-- ─── ACCIONES DE ADMINISTRADOR ─── -->
+    <div class="actions-bar">
+      <span class="estado-cambios" id="estado-cambios" hidden>Hay cambios sin publicar</span>
+      <button type="button" class="btn-confirm" id="btn-anadir-dia">Añadir día</button>
+      <button type="button" class="btn-confirm" id="btn-publicar">Publicar menús</button>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════ POPUP: AGREGAR / EDITAR PLATO ═══════════════════════ -->
+  <dialog id="modal-plato" class="modal-plato">
+    <form id="form-plato" class="modal-form" novalidate>
+      <h2 class="modal-titulo" id="modal-plato-titulo">Agregar plato</h2>
+
+      <label class="modal-label" for="plato-nombre">Nombre del plato *</label>
+      <input type="text" id="plato-nombre" class="modal-input" maxlength="60" required>
+
+      <label class="modal-label" for="plato-descripcion">Descripción *</label>
+      <textarea id="plato-descripcion" class="modal-textarea" maxlength="250" required></textarea>
+
+      <label class="modal-label" for="plato-imagen">Imagen</label>
+      <select id="plato-imagen" class="modal-input">
+        <option value="assets/img/guizo.jfif">Guiso</option>
+        <option value="assets/img/suprema.webp">Suprema / Milanesa</option>
+        <option value="assets/img/tarta.jfif">Tarta de jamón y queso</option>
+        <option value="assets/img/tarta-de-verduras.webp">Tarta de verdura</option>
+        <option value="assets/img/tallarines.jpg">Tallarines</option>
+        <option value="assets/img/pastelpapa.jpg">Pastel de papa</option>
+        <option value="assets/img/n9YGrfD3a_2000x1500__1.jpg">Pizza</option>
+        <option value="assets/img/foto_comida.png">Genérica</option>
+        <option value="__subir__">Subir una imagen…</option>
+      </select>
+      <input type="file" id="plato-archivo" accept="image/*" hidden>
+      <img id="plato-preview" class="modal-preview" src="assets/img/guizo.jfif" alt="Vista previa de la imagen">
+
+      <label class="modal-label" for="plato-stock">Cantidad disponible por día (opcional)</label>
+      <input type="number" id="plato-stock" class="modal-input" min="0" max="999" step="1" placeholder="Sin límite">
+
+      <p id="plato-error" class="modal-error-texto" role="alert" hidden></p>
+
+      <div class="modal-acciones">
+        <button type="button" id="btn-plato-cancelar" class="btn-cancel">Cancelar</button>
+        <button type="submit" class="btn-confirm">Guardar plato</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:AromasLight@gmail.com">AromasLight@gmail.com</a>
+      </div>
+      <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+<script src="assets/JS/datos.js"></script>
+<script src="assets/JS/ui.js"></script>
+<script src="assets/JS/admin-menu.js"></script>
+</body>
+</html>

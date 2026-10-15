@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aromas Light – Menú Semanal</title>
+  <link rel="stylesheet" href="assets/css/style-registrar-pedido.css" />
+  <link rel="stylesheet" href="assets/css/comun.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+</head>
+<body>
+
+  <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+  <header class="site-header">
+    <div class="header-bg">
+      <div class="header-content">
+        <h1 class="header-title">AROMAS LIGHT</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════ MENÚ ═══════════════════════ -->
+  <main id="menu" class="menu-main">
+
+    <!--
+      Las secciones de cada día YA NO están hardcodeadas acá.
+      platos.js recibe el listado de días (por query string
+      ?dias=lunes,miercoles,jueves o, si no viene nada, un valor
+      por defecto) y arma dinámicamente una sección por cada día
+      dentro de este contenedor.
+    -->
+    <div id="dias-container"></div>
+
+    <!-- ─── ACCIONES ─── -->
+    <div class="actions-bar">
+      <button class="btn-cancel" id="btn-cancelar" type="button">Cancelar</button>
+      <button class="btn-confirm" id="btn-guardar" type="button">Guardar pedido</button>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════ POPUP: RESUMEN DE PEDIDO ═══════════════════════ -->
+   
+  <dialog id="modal-resumen" class="modal-resumen">
+    <form id="form-pedido" class="modal-form">
+      <h2 class="modal-titulo">Resumen de tu pedido</h2>
+
+      <ul id="resumen-lista" class="resumen-lista"></ul>
+
+      
+      <div class="modal-acciones">
+        <button type="button" id="btn-volver-seleccionar" class="btn-cancel">
+          Volver a seleccionar
+        </button>
+        <button type="submit" class="btn-confirm">
+          Confirmar pedido
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ═══════════════════════ POPUP: ERROR ═══════════════════════ -->
+
+  <dialog id="modal-error" class="modal-error">
+    <p id="mensaje-error-texto" class="mensaje-error"></p>
+    <div class="modal-acciones modal-acciones--centrado">
+      <button type="button" id="btn-aceptar-error" class="btn-confirm">
+        Aceptar
+      </button>
+    </div>
+  </dialog>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:AromasLight@gmail.com">AromasLight@gmail.com</a>
+      </div>
+      <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<script src="assets/JS/datos.js"></script>
+<script src="assets/JS/ui.js"></script>
+<script src="assets/JS/registrar-pedido.js"></script>
+</body>
+</html>
