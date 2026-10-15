@@ -1,0 +1,50 @@
+[
+  {
+    "id": "lun-01",
+    "dia": "lunes",
+    "titulo": "Guiso",
+    "imagen": "assets/img/guizo.jfif",
+    "alt": "Guiso de arroz con carne",
+    "descripcion": "Guiso de arroz con carne molida, salsa roja, cebolla, morrón y ajo."
+  },
+  {
+    "id": "lun-02",
+    "dia": "lunes",
+    "titulo": "Suprema",
+    "imagen": "assets/img/suprema.webp",
+    "alt": "Suprema de pollo con puré de papas",
+    "descripcion": "Suprema de pollo al horno acompañada de puré de papas clásico y suave."
+  },
+  {
+    "id": "lun-03",
+    "dia": "lunes",
+    "titulo": "Tallarines",
+    "imagen": "assets/img/tallarines.jpg",
+    "alt": "Tallarines con salsa y queso rallado",
+    "descripcion": "Pasta larga clásica, suave y en su punto justo de cocción. Acompañados con la salsa que más te guste y queso rallado."
+  },
+  {
+    "id": "mier-01",
+    "dia": "miercoles",
+    "titulo": "Pastel de Papa",
+    "imagen": "assets/img/pastelpapa.jpg",
+    "alt": "Pastel de papa",
+    "descripcion": "Una base sabrosa de carne vacuna picada, perfectamente sazonada con cebolla, morrón y especias seleccionadas, cubierta por una capa suave y cremosa de puré de papas gratinado al horno"
+  },
+  {
+    "id": "mier-02",
+    "dia": "miercoles",
+    "titulo": "Tarta de Jamon y Queso",
+    "imagen": "assets/img/tarta.jfif",
+    "alt": "Tarta de jamón y queso",
+    "descripcion": "Masa casera bien crocante, rellena con abundante jamón cocido y una mezcla de quesos derretidos súper sabrosa. Dorada al horno y lista para disfrutar en cualquier momento del día."
+  },
+  {
+    "id": "mier-03",
+    "dia": "miercoles",
+    "titulo": "Pizza",
+    "imagen": "assets/img/n9YGrfD3a_2000x1500__1.jpg",
+    "alt": "Pizza de muzzarella",
+    "descripcion": "Masa casera bien dorada, salsa de tomates seleccionados y una capa irresistible de muzzarella bien derretida."
+  }
+]
