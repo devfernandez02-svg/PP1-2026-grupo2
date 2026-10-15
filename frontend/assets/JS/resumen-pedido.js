@@ -44,9 +44,7 @@ function crearDia(dia, plato) {
         <div class="caja-comentarios">
           <label for="comentario-${dia}">Comentarios para el ${nombre.toLowerCase()}</label>
           <textarea id="comentario-${dia}" name="comentario-${dia}" placeholder="Ej: sin cebolla, entregar después de las 18 hs..."></textarea>
-          <div class="fila-enviar">
-            <button class="btn-verde btn-chico" type="button">Enviar</button>
-          </div>
+         
         </div>
       </article>
   `;

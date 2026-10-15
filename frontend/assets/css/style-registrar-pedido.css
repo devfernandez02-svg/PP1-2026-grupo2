@@ -231,7 +231,7 @@ a {
   grid-column: 1 / -1;
   text-align: center;
   padding: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 20px;
   color: #5A5A5A;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 10px;
@@ -361,7 +361,7 @@ a {
   padding: 0.9rem 1rem;
   background: #F7F2EC;
   border-radius: 10px;
-  font-size: 0.92rem;
+  font-size: 20px;
 }
 
 .resumen-lista li strong {
