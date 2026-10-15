@@ -104,3 +104,9 @@ document.querySelector('.contenedor').addEventListener('click', (e) => {
 document.querySelector('#btn-cancelar').addEventListener('click', volverAlMenu);
 
 cargarResumen();
+
+const btnAtras = document.getElementById('btn-atras');
+
+btnAtras.addEventListener('click', () => {
+  volverAlMenu();
+});

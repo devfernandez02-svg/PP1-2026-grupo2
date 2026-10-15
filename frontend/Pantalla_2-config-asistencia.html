@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aromas Light</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cinzel:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="/frontend/assets/css/config-asist-style.css"/>
-    <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+<link rel="stylesheet" href="./assets/css/config-asist-style.css"/>
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
 </head>
 <body>
 
@@ -15,14 +15,29 @@
 
   <div class="header-icons">
   <!-- Botón Home — cambiá href="#" por la URL de tu página de inicio -->
-  <a href="#" class="icon-btn" title="Inicio">
-    <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+    <a href="Pantalla_2-config-asistencia.html" class="icon-btn" title="Inicio">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
   </a>
 
-  <!-- Botón Usuario — cambiá href="#" por la URL de tu perfil o login -->
-  <a href="#" class="icon-btn" title="Usuario">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-  </a>
+<!-- Menú de perfil -->
+<details class="menu-perfil">
+  <summary class="icon-btn" title="Usuario">
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+    </svg>
+  </summary>
+
+  <div class="opciones-perfil">
+    <a href="Pantalla_6-modificar-perfil.html">
+      Modificar perfil
+    </a>
+
+    <a href="Pantalla_1-login.html">
+      Cerrar sesión
+    </a>
+  </div>
+</details>
 </div>
 
   <div class="header-title">AROMAS LIGHT</div>
@@ -96,6 +111,6 @@
   <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
 </footer>
 
-<script src="/frontend/assets/JS/config-asistencia.js"></script>
+<script src="./assets/JS/config-asistencia.js"></script>
 </body>
 </html>

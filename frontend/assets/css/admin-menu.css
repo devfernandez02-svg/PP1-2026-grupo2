@@ -43,7 +43,7 @@ a {
       rgba(20, 20, 20, 0.55) 0%,
       rgba(192, 24, 42, 0.45)
     ),
-    url('/frontend/assets/img/foto_comida.png')
+    url('../assets/img/foto_comida.png')
       center / cover no-repeat;
   min-height: 240px;
   display: flex;
@@ -484,4 +484,109 @@ a {
     font-size: 1rem;
     text-align: center;
   }
+
 }
+
+
+/* ===== NAVEGACIÓN ===== */
+
+.site-header {
+  position: relative;
+  z-index: 20;
+}
+
+.header-bg {
+  position: relative;
+}
+
+.header-icons {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  z-index: 30;
+}
+
+.header-icons .icon-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header-icons .icon-btn:hover {
+  background: white;
+}
+
+.header-icons .icon-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.menu-perfil {
+  position: relative;
+}
+
+.menu-perfil summary::-webkit-details-marker {
+  display: none;
+}
+
+.opciones-perfil {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0003;
+  z-index: 40;
+}
+
+.opciones-perfil a {
+  display: block;
+  padding: 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+.opciones-perfil a:hover {
+  background: #eee;
+}
+
+@media (max-width: 600px) {
+  .header-icons {
+    left: 8px;
+    gap: 5px;
+  }
+
+  .header-icons .icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-icons .icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+

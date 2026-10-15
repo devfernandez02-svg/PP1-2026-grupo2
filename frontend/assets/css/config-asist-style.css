@@ -277,5 +277,61 @@ footer {
   text-align: center;
 }
 
+.menu-perfil {
+  position: relative;
+}
+
+.menu-perfil summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu-perfil summary::-webkit-details-marker {
+  display: none;
+}
+
+.opciones-perfil {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 100;
+  box-shadow: 0 4px 12px #0002;
+}
+
+.opciones-perfil a {
+  display: block;
+  padding: 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+.opciones-perfil a:hover {
+  background: #eee;
+}
+
+/* Permitir que el menú sobresalga del encabezado */
+header {
+  overflow: visible;
+  position: relative;
+  z-index: 100;
+}
+
+/* Menú desplegable del usuario */
+.menu-perfil {
+  position: relative;
+}
+
+.opciones-perfil {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+}
+
 /* Necesario: display:flex/block de otras reglas podría pisar el atributo hidden */
 .mensaje-error-dias[hidden] { display: none; }

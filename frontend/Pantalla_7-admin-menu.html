@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aromas Light – Administrar Menú</title>
-  <link rel="stylesheet" href="/frontend/assets/css/admin-menu.css" />
+  <link rel="stylesheet" href="./assets/css/admin-menu.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
@@ -15,13 +15,43 @@
 <body>
 
   <!-- ═══════════════════════ HEADER ═══════════════════════ -->
-  <header class="site-header">
-    <div class="header-bg">
-      <div class="header-content">
-        <h1 class="header-title">AROMAS LIGHT</h1>
-      </div>
+<header class="site-header">
+  <div class="header-bg">
+    <nav class="header-icons" aria-label="Navegación">
+      <!-- Atrás -->
+      <button type="button" class="icon-btn" id="btn-atras"
+              title="Atrás" aria-label="Atrás">
+        <svg viewBox="0 0 24 24">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      <!-- Home del administrador -->
+      <a href="Pantalla_7-admin-menu.html"
+         class="icon-btn" title="Inicio" aria-label="Inicio">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+          <polyline points="9 21 9 12 15 12 15 21"/>
+        </svg>
+      </a>
+      <!-- Perfil -->
+      <details class="menu-perfil">
+        <summary class="icon-btn" title="Perfil" aria-label="Perfil">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </summary>
+        <div class="opciones-perfil">
+          <a href="Pantalla_6-perfil-cliente.html">Modificar perfil</a>
+          <a href="Pantalla_1-login.html">Cerrar sesión</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-content">
+      <h1 class="header-title">AROMAS LIGHT</h1>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- ═══════════════════════ MENÚ (ADMIN) ═══════════════════════ -->
   <main id="menu" class="menu-main">
@@ -253,6 +283,12 @@
       <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+<script>
+  document.getElementById('btn-atras').addEventListener('click', () => {
+    window.history.back();
+  });
+</script>
 
 </body>
 </html>

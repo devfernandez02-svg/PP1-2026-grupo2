@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aromas Light – Menú Semanal</title>
-  <link rel="stylesheet" href="/frontend/assets/css/style-registrar-pedido.css" />
+  <link rel="stylesheet" href="./assets/css/style-registrar-pedido.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
@@ -14,15 +14,65 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════ HEADER ═══════════════════════ -->
-  <header class="site-header">
-    <div class="header-bg">
-      <div class="header-content">
-        <h1 class="header-title">AROMAS LIGHT</h1>
-      </div>
-    </div>
-  </header>
+<!-- ═══════════════════════ HEADER ═══════════════════════ -->
+<header class="site-header">
+  <div class="header-bg">
+    <div class="header-content">
 
+<div class="header-icons">
+
+  <!-- Botón de inicio -->
+  <a href="Pantalla_2-config-asistencia.html"
+     class="nav-icon"
+     title="Inicio"
+     aria-label="Inicio">
+    <svg viewBox="0 0 24 24">
+      <path d="M3 10L12 3L21 10V21H3V10Z"/>
+      <path d="M9 21V13H15V21"/>
+    </svg>
+
+  </a>
+  <!-- Botón de perfil -->
+  <details class="menu-perfil">
+    <summary class="nav-icon" title="Perfil" aria-label="Perfil">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 21V19C4 15.7 7.6 13 12 13S20 15.7 20 19V21"/>
+      </svg>
+    </summary>
+
+    <div class="opciones-perfil">
+      <a href="Pantalla_6-modificar-perfil.html">
+        Modificar perfil
+      </a>
+
+      <a href="Pantalla_1-login.html">
+        Cerrar sesión
+      </a>
+    </div>
+
+  </details>
+
+</div>
+
+          <div class="opciones-perfil">
+            <a href="Pantalla_6-modificar-perfil.html">
+              Modificar perfil
+            </a>
+
+            <a href="Pantalla_1-login.html">
+              Cerrar sesión
+            </a>
+          </div>
+        </details>
+
+      </div>
+
+      <h1 class="header-title">AROMAS LIGHT</h1>
+
+    </div>
+  </div>
+</header>
   <!-- ═══════════════════════ MENÚ ═══════════════════════ -->
   <main id="menu" class="menu-main">
 
@@ -87,6 +137,6 @@
       <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
     </div>
   </footer>
-<script src="/frontend/assets/JS/registrar-pedido.js"></script>
+<script src="./assets/JS/registrar-pedido.js"></script>
 </body>
 </html>

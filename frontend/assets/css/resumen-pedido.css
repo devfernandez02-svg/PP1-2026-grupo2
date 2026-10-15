@@ -42,25 +42,108 @@ main {
 /* ══════════════════════════════════════════════
    HEADER
    ══════════════════════════════════════════════ */
+/* Navegación del encabezado */
+
 .site-header {
-  width: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .header-bg {
+  overflow: visible;
+}
+
+.site-header .header-content {
   position: relative;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(192, 24, 42, 0.72) 0%,
-      rgba(20, 20, 20, 0.55) 0%,
-      rgba(192, 24, 42, 0.45)
-    ),
-    url('/frontend/assets/img/foto_comida.png')
-      center / cover no-repeat;
-  min-height: 240px;
+  width: 100%;
+  text-align: center;
+}
+
+.site-header .header-icons {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+}
+
+.site-header .icon-btn {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.site-header .icon-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.site-header .icon-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.site-header .menu-perfil {
+  position: relative;
+}
+
+.site-header .menu-perfil summary::-webkit-details-marker {
+  display: none;
+}
+
+.site-header .opciones-perfil {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0003;
+  z-index: 200;
+  text-align: left;
+}
+
+.site-header .opciones-perfil a {
+  display: block;
+  padding: 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+.site-header .opciones-perfil a:hover {
+  background: #eee;
+}
+
+@media (max-width: 600px) {
+  .site-header .header-icons {
+    left: 8px;
+    gap: 6px;
+  }
+
+  .site-header .icon-btn {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .header-content {
@@ -423,4 +506,89 @@ main {
     gap: 0.3rem;
     font-size: 0.85rem;
   }
+
+.site-header {
+  position: relative;
+  z-index: 100;
+}
+
+.header-content {
+  position: relative;
+  width: 100%;
+}
+
+.header-icons {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icon {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-icon:hover {
+  background: white;
+}
+
+.menu-perfil {
+  position: relative;
+}
+
+.menu-perfil summary::-webkit-details-marker {
+  display: none;
+}
+
+.opciones-perfil {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  padding: 8px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 12px #0003;
+  z-index: 200;
+}
+
+.opciones-perfil a {
+  display: block;
+  padding: 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+.opciones-perfil a:hover {
+  background: #eee;
+}
+
+@media (max-width: 600px) {
+  .header-icons {
+    left: 8px;
+    gap: 5px;
+  }
+
+  .nav-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+  }
+}
+
 }

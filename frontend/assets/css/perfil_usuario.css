@@ -39,7 +39,7 @@ main.perfil-container{
 
   
   background-color: var(--azul-header);
-  background-image:  url('/frontend/assets/img/foto_comida.png'); 
+  background-image:  url('../assets/img/foto_comida.png'); 
   background-size: cover;
   background-position: center;
 
@@ -329,4 +329,101 @@ footer p{
   footer p{
     font-size: 0.72rem;
   }
+
+} /* Cierra el @media de 480px */
+
+/* ===== BOTONES DE NAVEGACIÓN ===== */
+
+.header-icons {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
 }
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background: white;
+}
+
+.icon-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.menu-perfil {
+  position: relative;
+}
+
+.menu-perfil summary {
+  list-style: none;
+}
+
+.menu-perfil summary::-webkit-details-marker {
+  display: none;
+}
+
+.opciones-perfil {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0003;
+  z-index: 20;
+}
+
+.opciones-perfil a {
+  display: block;
+  padding: 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+.opciones-perfil a:hover {
+  background: #eee;
+}
+
+@media (max-width: 600px) {
+  .header-icons {
+    left: 8px;
+    gap: 5px;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+
+
+
+
+

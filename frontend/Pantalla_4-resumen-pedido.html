@@ -9,18 +9,44 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="/frontend/assets/css/resumen-pedido.css">
+  <link rel="stylesheet" href="./assets/css/resumen-pedido.css">
   <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="header-bg">
-      <div class="header-content">
-        <h1 class="header-title">AROMAS LIGHT</h1>
-      </div>
+<header class="site-header">
+  <div class="header-bg">
+    <div class="header-content">
+<nav class="header-icons" aria-label="Navegación">
+  <button type="button" class="icon-btn" id="btn-atras" title="Atrás" aria-label="Atrás">
+    <svg viewBox="0 0 24 24">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  </button>
+  <a href="Pantalla_2-config-asistencia.html"
+     class="icon-btn" title="Inicio" aria-label="Inicio">
+    <svg viewBox="0 0 24 24">
+      <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+      <polyline points="9 21 9 12 15 12 15 21"/>
+    </svg>
+  </a>
+  <details class="menu-perfil">
+    <summary class="icon-btn" title="Perfil" aria-label="Perfil">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+      </svg>
+    </summary>
+    <div class="opciones-perfil">
+      <a href="Pantalla_6-modificar-perfil.html">Modificar perfil</a>
+      <a href="Pantalla_1-login.html">Cerrar sesión</a>
     </div>
-  </header>
+  </details>
+</nav>
+      <h1 class="header-title">AROMAS LIGHT</h1>
+    </div>
+  </div>
+</header>
 
   <main>
     <h2 id="intro">Verificá tus pedidos antes de confirmar</h2>
@@ -49,6 +75,6 @@
       <p class="footer-copy">© 2026 Aromas Light. Todos los derechos reservados.</p>
     </div>
   </footer>
-<script src="/frontend/assets/JS/resumen-pedido.js"></script>
+<script src="./assets/JS/resumen-pedido.js"></script>
 </body>
 </html>

@@ -37,10 +37,12 @@ body::before{
 }
 
 .panel {
+  position: relative;
   width: 500px;
   min-height: 100vh;
   background-color: var(--fondo-panel);
   padding: 20px 96px;
+}
 }
 
 /* Logo */
@@ -171,5 +173,63 @@ button:hover {
 
   .textos p {
     white-space: normal;
+ 
+  }
+ }
+
+/* ===== BOTONES DE NAVEGACIÓN ===== */
+
+.header-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.header-icons .nav-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-icons .nav-icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-icons .nav-icon-btn svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 440px) {
+  .header-icons {
+    top: 12px;
+    left: 12px;
+    gap: 6px;
+  }
+
+  .header-icons .nav-icon-btn {
+    width: 34px;
+    height: 34px;
   }
 }
+
+

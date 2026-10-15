@@ -14,7 +14,7 @@ color:white;
 position:relative;
 width:100%;
 height:110px;
-overflow:hidden;
+overflow:visible;
 }
 
 .banner{
@@ -34,12 +34,17 @@ justify-content:center;
 align-items:center;
 }
 
-.header-icons{
-position:absolute;
-left:40px;
-top:50%;
-transform:translateY(-50%);
-z-index:2;
+.header-icons {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
 }
 
 .icon-btn {
@@ -52,6 +57,64 @@ z-index:2;
   background: rgba(255, 255, 255, 0.25);
   transition: background .2s ease, transform .15s ease;
   text-decoration: none;
+}
+
+.icon-btn {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #111;
+}
+
+.menu-perfil {
+  position: relative;
+}
+
+.menu-perfil summary {
+  list-style: none;
+}
+
+.menu-perfil summary::-webkit-details-marker {
+  display: none;
+}
+
+.opciones-perfil {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0003;
+  z-index: 10;
+}
+
+.opciones-perfil a {
+  display: block;
+  padding: 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+.opciones-perfil a:hover {
+  background: #eee;
+}
+
+@media (max-width: 600px) {
+  .header-icons {
+    left: 8px;
+    gap: 6px;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .navbar h1 {
+    font-size: clamp(20px, 5vw, 50px);
+  }
 }
 
 .icon-btn:hover {
@@ -207,3 +270,5 @@ text-align:center;
 footer p{
 margin:5px 0;
 }
+
+
